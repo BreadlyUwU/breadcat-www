@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "w95fa";
+  src: url("fonts/w95fa.woff2");
+  src: url("fonts/w95fa.woff");
+  src: url("fonts/w95fa.otf");
+}
+
+@font-face {
+  font-family: "sysfont";
+  src: url("fonts/sysfont.woff2");
+  src: url("fonts/sysfont.woff");
+  src: url("fonts/sysfont.otf");
+}
+
+body {
+  color: #FFFFFF;
+  background: #9a4002;
+  font-family: "w95fa";
+  font-size: 18px;
+  margin: 0px;
+}
+
+#supermainbox {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: url("images/bg.gif");
+
+}
+
+#header {
+  display: flex;
+  flex-flow: row wrap;
+  position: static;
+  width: 100%;
+  height: 28px;
+  box-sizing: border-box;
+  align-items: center;
+  margin-bottom: 5px;
+  background: #9a4002;
+  color: #e4ea92;
+  image-rendering: pixelated;
+  text-align: center;
+  vertical-align: middle;
+  //text-shadow: 0 0 1px #e4ea92;
+  border-bottom: #9a4002 4px ridge;
+
+  overflow: hidden;
+}
+#header span {
+  font-family: "sysfont";
+  font-size: larger;
+  letter-spacing: 1px;
+}
+
+#header_l {
+  flex: 1;
+  height: inherit;
+  text-align: left;
+  padding-left: 2px;
+  padding-top: 2px;
+}
+
+#header_c {
+  flex: 1;
+  height: inherit;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+
+  padding-top: 4px;
+}
+
+#header_r {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: inherit;
+  box-sizing: border-box;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: flex-end;
+}
+#icon-mastodon, #icon-bluesky, #icon-cohost {
+  padding-left: 4px;
+}
+#icon-atom {
+  padding-left: 1px;
+}
+
+#mainbox {
+  display: flex;
+  flex: 3 1 content;
+  flex-direction: row;
+  align-self: stretch;
+  margin: 0px 5px;
+
+  box-sizing: border-box;
+  flex-direction: row;
+}
+
+#sidebar-left, #sidebar-right {
+  flex: 0 0 280px;
+  flex-direction: column;
+  box-sizing: border-box;
+  text-align: center;
+
+  font-family: "w95fa";
+  font-size: 18px;
+
+  image-rendering: pixelated;
+}
+#sidebar-left > *:not(:first-child) {
+  margin-top: 5px;
+}
+
+#sidebar-left > div > table {
+  width: 100%;
+  margin: auto;
+  padding: 2%;
+}
+#sidebar-left > div > table th {
+  width: 50%;
+}
+
+#bobvibes {
+  background: url("images/breadcat.gif") repeat,#560000CA;
+  animation: bg-scrolling-reverse 6s linear infinite;
+  height: 122px;
+}
+#bob {
+  box-sizing: content-box;
+  height: 90px;
+  background: center / auto no-repeat url("images/bobvibes.gif");
+}
+
+#table-of-content img {
+  vertical-align: text-bottom;
+}
+
+#table-of-content table {
+  border-top: #9a4002 4px ridge;
+}
+
+#content {
+  flex: 3;
+  margin-left: 5px;
+  letter-spacing: 0.2px;
+}
+
+#content #blog-footer {
+  margin-left: auto;
+  display: block;
+
+  border-top: #9a4002 4px ridge;;
+  background: #00000050;
+  padding-top: 5px;
+  padding: 10px 0;
+}
+#content #blog-footer :nth-of-type(n) {
+  text-align: center;
+  padding: 2px 10px;
+}
+
+article {
+  padding: 10px;
+}
+article h1,
+article h2 {
+  text-decoration: underline;
+}
+article p {
+  line-height: 1.4;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 128px;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-top: #9a4002 4px ridge;;
+  color: #e4ea92;
+  text-align: center;
+  backdrop-filter: sepia(50%);
+  background: center bottom / contain no-repeat url("images/catbreadwink.png"),#781800BA;
+}
+
+#footer #ft-left {
+  text-align: left;
+}
+#footer #ft-right {
+  text-align: right;
+}
+
+#footer span {
+  font-family: "sysfont";
+  font-size: 16px;
+}
+
+#footer img {
+  vertical-align: middle;
+}
+
+a {
+  color: #f9bc2a;
+  text-decoration: none;
+}
+
+
+// ================
+// = Windows Class =
+// ================
+
+.window {
+  box-sizing: border-box;
+  background: #560000CA;
+  border: #9a4002 4px ridge;
+}
+
+.darken {
+  box-sizing: border-box;
+  background: #560000ee;
+  border: #9a4002 4px ridge;
+}
+
+// ===================
+// = Window Controls =
+// ===================
+
+.titlebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  //background: #00000069;
+  background: linear-gradient(90deg, #9a4002, #ce6a3f);
+  box-sizing: content-box;
+  vertical-align: middle;
+  height: 20px;
+  border-bottom: #9a4002 4px ridge;
+}
+
+.title {
+  color:#ffccaa;
+  font-family: "w95fa";
+  font-size: 15px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  margin-left: 0px;
+  padding-top: 2px;
+}
+
+.w-left {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  box-sizing: border-box;
+  min-width: fit-content;
+  justify-content: flex-start;
+  text-align: left;
+  vertical-align: middle;
+  align-items: center;
+  padding-left: 3px;
+}
+
+.w-right {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  box-sizing: border-box;
+  min-width: fit-content;
+  justify-content: flex-end;
+  text-align: right;
+  vertical-align: middle;
+  align-items: center;
+  padding: 0 3px;
+}
+
+.btn {
+  height: 14px;
+  width: 16px;
+  box-sizing: border-box;
+  image-rendering: pixelated;
+}
+
+.arrow {
+  background: url("images/arrow.gif");
+  margin-right: 4px;
+}
+
+.minimize {
+  background: url("images/reduce.gif");
+  margin-left: 2px;
+}
+
+.maximize {
+  background: url("images/maximize.gif");
+  margin-left: 2px;
+}
+
+.close {
+  background: url("images/close.gif");
+  margin-left: 2px;
+}
+
+// Background shenanigans
+@keyframes bg-scrolling-reverse {
+  100% { background-position: 100px 100px; }
+}
+
+@keyframes bg-scrolling {
+  0% { background-position: 100px 100px; }
+}
+
+// #####################
+// # Responsive Design #
+// #####################
+
+@media screen and (max-width: 50rem) {
+  #mainbox {
+    flex-direction: column;
+  }
+
+  #content {
+    margin-left: 0;
+    order: 1;
+  }
+
+  #sidebar-left {
+    order: 2;
+  }
+
+  #buttons-card {
+    display: none;
+  }
+
+  #bobvibes {
+    display: none;
+  }
+}

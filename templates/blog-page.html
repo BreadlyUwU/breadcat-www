@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+<head>
+  <title>{{ page.title }}</title>
+</head>
+
+{% block content %}
+<div class="titlebar">
+    <div class="w-left">
+      <a href="{{ get_url(path='/blog') }}"><div class="btn arrow" title="Back"></div></a>
+      <div class="title"><span>{{ page.title }}</span></div>
+    </div>
+    <div class="w-right">
+      <div class="btn minimize"></div>
+      <div class="btn maximize"></div>
+      <div class="btn close"></div>
+    </div>
+</div>
+<article>
+  {{ page.content | safe }}
+</article>
+<table id="blog-footer">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Category/Tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ page.date | safe }}</td>
+      <td>
+        {% if page.taxonomies.tags %}
+          {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
+          {% for tag in post_tags %}
+            <a href="/tag-listing#{{ tag | slugify }}">{{ tag }}</a>
+            {%- if not loop.last %}{{ ", " | safe }}{% endif -%}
+          {% endfor -%}
+        {% endif %}
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock content %}

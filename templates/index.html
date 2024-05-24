@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="titlebar">
+    <div class="w-left">
+      <div class="title"><span>C:</span></div>
+    </div>
+    <div class="w-right">
+      <div class="btn minimize"></div>
+      <div class="btn maximize"></div>
+      <div class="btn close"></div>
+    </div>
+</div>
+<article>
+    <p>
+        I'm Breadly, I'm an aspiring developper who is currently learning (at an incredibly slow rate) the basics but with Rust. Wanting to do stuff with my 'putter definitely was the stupiest decision of my life.<br />
+        I also know some (very tiny) bits of Java/Kotlin, C, Lua… of PHP, Javascript and Python.
+      </p>
+      <p>
+        Oh and I use arch btw. /\
+      </p>
+      <p>
+        I hope I'll soon be able to make some cool stuff I would want to share in this cozy place. <img src="{{ get_url(path='images/catAnim/catNom.gif') }}"/>
+      </p>
+</article>
+{% endblock content %}

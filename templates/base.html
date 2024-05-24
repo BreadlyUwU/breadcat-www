@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preload" href="{{ get_url(path='global.css') }}" as="style" />
+    <link rel="preload" href="{{ get_url(path='breadly-engine.js') }}" as="style" />
+    <link rel="stylesheet" href="{{ get_url(path='global.css') }}" />
+    <title>{{ config.title }}</title>
+    <meta name="description" content="{{ config.description }}" />
+    <meta charset="utf-8" />
+    <meta pronouns="she/they" />
+    <meta name="theme-color" content="#9a4002" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    {% block rss %}
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") }}">
+    {% endblock %}
+
+  </head>
+
+{%set buildtime = now() | date(format="%Y-%m-%d %H:%M") %}
+
+<body>
+  <div id="supermainbox">
+
+    <div id="header">
+      <div id="header_l"><span id="js-status">🚫</span></div>
+      <div id="header_c"><span style="white-space: nowrap;">{{ config.title }}</span></div>
+      <div id="header_r">
+        <div id="icon-mastodon"><a href="https://eldritch.cafe/@breadly" rel="me"><img src="{{get_url(path='/images/links-btn/btn-mastodon.gif')}}" alt="Mastodon" title="Mastodon"/></a></div>
+        <div id="icon-bluesky"><a href="https://bsky.app/profile/breadcat.neocities.org" rel="me"><img src="{{get_url(path='/images/links-btn/btn-bluesky.gif')}}" alt="Bluesky" title="Bluesky"/></a></div>
+        <div id="icon-cohost"><a href="https://cohost.org/Breadly" rel="me"><img src="{{get_url(path='/images/links-btn/btn-cohost.gif')}}" alt="cohost" title="cohost"/></a></div>
+        <div id="icon-atom"><a href="{{ get_url(path='atom.xml') }}"><img src="{{ get_url(path='images/atom.gif') }}" alt="Atom Feed" title="Atom Feed"></a></div>
+      </div>
+    </div>
+    <div id="mainbox">
+
+      <div id="sidebar-left">
+
+        <div class="window" id="bobvibes">
+          <div class="titlebar">
+            <div class="w-left">
+              <div class="title"><span>:D</span></div>
+            </div>
+            <div class="w-right">
+              <div class="btn minimize"></div>
+              <div class="btn maximize"></div>
+              <div class="btn close"></div>
+            </div>
+          </div>
+          <div id="bob"></div>
+        </div>
+
+        <div class="window" id="table-of-content">
+          <div class="titlebar">
+            <div class="w-left">
+              <div class="title"><span>Table of content</span></div>
+            </div>
+            <div class="w-right">
+              <div class="btn minimize"></div>
+              <div class="btn maximize"></div>
+              <div class="btn close"></div>
+            </div>
+          </div>
+          <h3><img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/>OwO<img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/></h3>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><span><a href="{{ config.base_url }}">Home</a><span></th>
+                <th scope="col"><span><a href="{{ get_url(path='blog/') }}">Blog</a><span></th>
+              </tr>
+            </thead>
+          </table>
+          
+          <!-- Working, but irrevelant for now
+          {% set blog_section = get_section(path="blog/_index.md") %}
+          {% for year, posts in blog_section.pages | group_by(attribute="year") %}
+          <ul>
+            {% for post in posts %}
+            <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endfor %}
+          -->
+                
+        </div>
+
+        <div class="window" id="buttons-card">
+          <div class="titlebar">
+            <div class="w-left">
+              <div class="title"><span>The Obligatory Buttons</span></div>
+            </div>
+            <div class="w-right">
+              <div class="btn minimize"></div>
+              <div class="btn maximize"></div>
+              <div class="btn close"></div>
+            </div>
+          </div>
+          <img src="{{ get_url(path='images/btn/transrats.gif') }}">
+          <a href="https://yesterweb.org/no-to-web3/"><img src="{{ get_url(path='images/btn/notoweb3.gif') }}" title="Say no to Web3"></a> 
+          <a href="https://neocities.org/"><img src="{{ get_url(path='images/btn/neocities.gif') }}"></a>
+          <br />
+          <a href="https://kde.org/"><img src="{{ get_url(path='images/btn/kde.gif') }}"></a>
+          <a href="https://kate-editor.org/"><img src="{{ get_url(path='images/btn/kate.gif') }}"></a>
+          <a href="https://www.mozilla.org/firefox/new/"><img src="{{ get_url(path='images/btn/firefox.gif') }}"></a>
+          <br />
+          <img src="{{ get_url(path='images/btn/archlinux.gif') }}">
+          <a href="https://dreampipe.net"><img src="{{ get_url(path='images/btn/dreamcast.gif') }}"></a>
+          <a href="https://joinmastodon.org/"><img src="{{ get_url(path='images/btn/mastodon.gif') }}"></a>
+          <br />
+          <img src="{{ get_url(path='images/btn/antifa.gif') }}">
+          <img src="{{ get_url(path='images/btn/ulysses.gif') }}">
+          <a href="https://dk64randomizer.com/"><img src="{{ get_url(path='images/btn/dk64gaming.gif') }}"></a>
+        </div>
+      </div>
+
+      <div class="window darken" id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <div id="ft-left">
+        <span>Hosted by <a href="https://www.neocities.org">Neocities<img src="{{ get_url(path='images/neocities-logo.png') }}" /></a></span><br/>
+        <span>Built with <a href="https://www.getzola.org/">Zola <img src="{{ get_url(path='images/zola-logo.gif') }}"></a></span>
+      </div>
+      <div id="ft-right">
+        <span>✳️ Last updated<br/>{{ buildtime }}<br />(UTC+02 - Europe/Paris)</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+<script src="{{ get_url(path='breadly-engine.js') }}" type="module"></script>
+
+</html>
