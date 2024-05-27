@@ -32,10 +32,9 @@
         <div id="icon-atom"><a href="{{ get_url(path='atom.xml') }}"><img src="{{ get_url(path='images/atom.gif') }}" alt="Atom Feed" title="Atom Feed"></a></div>
       </div>
     </div>
+
     <div id="mainbox">
-
       <div id="sidebar-left">
-
         <div class="window" id="bobvibes">
           <div class="titlebar">
             <div class="w-left">
@@ -70,18 +69,6 @@
               </tr>
             </thead>
           </table>
-          
-          <!-- Working, but irrevelant for now
-          {% set blog_section = get_section(path="blog/_index.md") %}
-          {% for year, posts in blog_section.pages | group_by(attribute="year") %}
-          <ul>
-            {% for post in posts %}
-            <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-            {% endfor %}
-          </ul>
-          {% endfor %}
-          -->
-                
         </div>
 
         <div class="window" id="buttons-card">
@@ -96,7 +83,7 @@
             </div>
           </div>
           <img src="{{ get_url(path='images/btn/transrats.gif') }}">
-          <a href="https://yesterweb.org/no-to-web3/"><img src="{{ get_url(path='images/btn/notoweb3.gif') }}" title="Say no to Web3"></a> 
+          <a href="https://yesterweb.org/no-to-web3/"><img src="{{ get_url(path='images/btn/notoweb3.gif') }}" title="Say no to Web3"></a>
           <a href="https://neocities.org/"><img src="{{ get_url(path='images/btn/neocities.gif') }}"></a>
           <br />
           <a href="https://kde.org/"><img src="{{ get_url(path='images/btn/kde.gif') }}"></a>
@@ -117,7 +104,6 @@
         {% block content %}
         {% endblock %}
       </div>
-
     </div>
 
     <div id="footer">
@@ -129,7 +115,6 @@
         <span>✳️ Last updated<br/>{{ buildtime }}<br />(UTC+02 - Europe/Paris)</span>
       </div>
     </div>
-
   </div>
 </body>
 
