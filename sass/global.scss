@@ -148,6 +148,10 @@ body {
   letter-spacing: 0.2px;
 }
 
+#content :first-child {
+  margin-top: 0px;
+}
+
 #content pre {
   font-size: 90%;
 }
@@ -215,9 +219,9 @@ a {
 }
 
 
-// ================
+// =================
 // = Windows Class =
-// ================
+// =================
 
 .window {
   box-sizing: border-box;
@@ -320,9 +324,9 @@ a {
   0% { background-position: 100px 100px; }
 }
 
-// #####################
-// # Responsive Design #
-// #####################
+// =====================
+// = Responsive Design =
+// =====================
 
 @media screen and (max-width: 50rem) {
   #mainbox {
