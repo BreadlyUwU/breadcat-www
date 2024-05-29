@@ -195,7 +195,7 @@ article p {
   border-top: #955b33 4px ridge;;
   color: #e4ea92;
   text-align: center;
-  backdrop-filter: sepia(50%);
+
   background: linear-gradient(180deg, #781800BA 20%, #955b33 95%), center bottom / contain no-repeat url("images/catbreadwink.png");
 }
 
@@ -228,12 +228,6 @@ a {
 .window {
   box-sizing: border-box;
   background: #531515ca;
-  border: #955b33 4px ridge;
-}
-
-.darken {
-  box-sizing: border-box;
-  background: #531515ee;
   border: #955b33 4px ridge;
 }
 
