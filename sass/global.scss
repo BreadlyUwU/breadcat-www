@@ -1,3 +1,5 @@
+//Temp: #955b33
+
 @font-face {
   font-family: "w95fa";
   src: url("fonts/w95fa.woff2");
@@ -14,7 +16,7 @@
 
 body {
   color: #FFFFFF;
-  background: #9a4002;
+  background: #955b33;
   font-family: "w95fa";
   font-size: 18px;
   margin: 0px;
@@ -37,13 +39,13 @@ body {
   box-sizing: border-box;
   align-items: center;
   margin-bottom: 5px;
-  background: #9a4002;
+  background: #955b33;
   color: #e4ea92;
   image-rendering: pixelated;
   text-align: center;
   vertical-align: middle;
   //text-shadow: 0 0 1px #e4ea92;
-  border-bottom: #9a4002 4px ridge;
+  border-bottom: #955b33 4px ridge;
 
   overflow: hidden;
 }
@@ -139,7 +141,7 @@ body {
 }
 
 #table-of-content table {
-  border-top: #9a4002 4px ridge;
+  border-top: #955b33 4px ridge;
 }
 
 #content {
@@ -160,7 +162,7 @@ body {
   margin-left: auto;
   display: block;
 
-  border-top: #9a4002 4px ridge;;
+  border-top: #955b33 4px ridge;;
   background: #00000050;
   padding-top: 5px;
   padding: 10px 0;
@@ -190,11 +192,11 @@ article p {
   padding: 10px;
   margin-top: 5px;
   box-sizing: border-box;
-  border-top: #9a4002 4px ridge;;
+  border-top: #955b33 4px ridge;;
   color: #e4ea92;
   text-align: center;
   backdrop-filter: sepia(50%);
-  background: center bottom / contain no-repeat url("images/catbreadwink.png"),#781800BA;
+  background: linear-gradient(180deg, #781800BA 20%, #955b33 95%), center bottom / contain no-repeat url("images/catbreadwink.png");
 }
 
 #footer #ft-left {
@@ -225,14 +227,14 @@ a {
 
 .window {
   box-sizing: border-box;
-  background: #560000CA;
-  border: #9a4002 4px ridge;
+  background: #531515ca;
+  border: #955b33 4px ridge;
 }
 
 .darken {
   box-sizing: border-box;
-  background: #560000ee;
-  border: #9a4002 4px ridge;
+  background: #531515ee;
+  border: #955b33 4px ridge;
 }
 
 // ===================
@@ -244,12 +246,11 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  //background: #00000069;
-  background: linear-gradient(90deg, #9a4002, #ce6a3f);
+  background: linear-gradient(90deg, #955b33, #ac724b);
   box-sizing: content-box;
   vertical-align: middle;
   height: 20px;
-  border-bottom: #9a4002 4px ridge;
+  border-bottom: #955b33 4px ridge;
 }
 
 .title {
