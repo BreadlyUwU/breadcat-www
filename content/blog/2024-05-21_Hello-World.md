@@ -1,5 +1,6 @@
 +++
 title = "Hello World"
+description = "You'll see the creation of new lives… Eventually."
 [taxonomies]
 tags = ['Misc']
 +++
