@@ -144,6 +144,16 @@ body {
   border-top: #955b33 4px ridge;
 }
 
+#blog-list-item {
+  box-sizing: border-box;
+  width: 90%;
+  height: fit-content;
+  border: 1px solid #ac724b;
+  margin-bottom: 15px;
+  margin-right: auto;
+  padding: 10px 5px;
+}
+
 #content {
   flex: 3;
   margin-left: 5px;
