@@ -13,10 +13,13 @@
 </div>
 <article>
   {{ section.content | safe }}
-  <ul>
     {% for page in section.pages %}
-    <li><a href="{{ page.permalink | safe }}">{{page.date}}: {{ page.title }}</a></li>
+    <div id="blog-list-item">
+      <a href="{{ page.permalink | safe }}">
+        {{page.date}} <b>- {{ page.title }}</b><br/><br/>
+        <span>{{ page.description }}</span>
+      </a>
+    </div>
     {% endfor %}
-  </ul>
 </article>
 {% endblock content %}
