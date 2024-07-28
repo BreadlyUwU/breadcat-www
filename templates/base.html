@@ -3,7 +3,8 @@
   <head>
     <link rel="preload" href="{{ get_url(path='global.css') }}" as="style" />
     <link rel="preload" href="{{ get_url(path='breadly-engine.js') }}" as="style" />
-    <link rel="stylesheet" href="{{ get_url(path='global.css') }}" />
+    <link rel="stylesheet" href="https://esm.sh/emfed@1/toots.css" type="text/css" />
+    <link rel="stylesheet" href="{{ get_url(path='global.css') }}" type="text/css" />
     <title>{{ config.title }}</title>
     <meta name="description" content="{{ config.description }}" />
     <meta charset="utf-8" />
@@ -104,6 +105,22 @@
         {% block content %}
         {% endblock %}
       </div>
+
+      <div id="sidebar-right">
+        <div class="window" id="mastodon-box">
+          <div class="titlebar">
+            <div class="w-left">
+              <div class="title"><span>Mastodon Feed</span></div>
+            </div>
+            <div class="w-right">
+              <div class="btn minimize"></div>
+              <div class="btn maximize"></div>
+              <div class="btn close"></div>
+            </div>
+          </div>
+          <a class="mastodon-feed" href="https://eldritch.cafe/@Breadly" data-toot-limit="4">Follow me on the Fediverse</a>
+        </div>
+      </div>
     </div>
 
     <div id="footer">
@@ -119,5 +136,6 @@
 </body>
 
 <script src="{{ get_url(path='breadly-engine.js') }}" type="module"></script>
+<script src="https://esm.sh/emfed@1" type="module"></script>
 
 </html>
