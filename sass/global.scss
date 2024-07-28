@@ -112,6 +112,10 @@ body {
 
   image-rendering: pixelated;
 }
+#sidebar-right {
+  margin-left: 5px;
+}
+
 #sidebar-left > *:not(:first-child) {
   margin-top: 5px;
 }
@@ -122,6 +126,19 @@ body {
   padding: 2%;
 }
 #sidebar-left > div > table th {
+  width: 50%;
+}
+
+#sidebar-right > *:not(:first-child) {
+  margin-top: 5px;
+}
+
+#sidebar-right > div > table {
+  width: 100%;
+  margin: auto;
+  padding: 2%;
+}
+#sidebar-right > div > table th {
   width: 50%;
 }
 
@@ -320,6 +337,39 @@ a {
   margin-left: 2px;
 }
 
+// Mastodon Feed Shenanigans
+.toots {
+  margin: 0;
+  height: 421px;
+  font-family: inherit;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  image-rendering: auto;
+}
+.toot {
+  padding: 2px;
+  border-bottom: 1px solid #ac724b;
+}
+.toot .user {
+  padding-top: 0px;
+}
+.toot .display-name {
+  display: none;
+}
+.toot .boost {
+  display: none;
+}
+.toot .username {
+  color: #e4ea92;
+}
+.toot .permalink {
+  font-size: 0.8em;
+  color: #e4ea92;
+}
+.toot .body {
+  font-size: 0.9em;
+}
+
 // Background shenanigans
 @keyframes bg-scrolling-reverse {
   100% { background-position: 100px 100px; }
@@ -347,11 +397,19 @@ a {
     order: 2;
   }
 
+  #sidebar-right {
+    display: none;
+  }
+
   #buttons-card {
     display: none;
   }
 
   #bobvibes {
+    display: none;
+  }
+
+  #mastodon-box {
     display: none;
   }
 }
