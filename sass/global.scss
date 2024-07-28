@@ -40,7 +40,7 @@ body {
   align-items: center;
   margin-bottom: 5px;
   background: #955b33;
-  color: #e4ea92;
+  color: #ffccaa;
   image-rendering: pixelated;
   text-align: center;
   vertical-align: middle;
@@ -57,20 +57,18 @@ body {
 
 #header_l {
   flex: 1;
-  height: inherit;
   text-align: left;
   padding-left: 2px;
-  padding-top: 2px;
 }
 
 #header_c {
   flex: 1;
-  height: inherit;
+  /*height: inherit;
   box-sizing: border-box;
   text-align: center;
   vertical-align: middle;
 
-  padding-top: 4px;
+  padding-top: 4px*/
 }
 
 #header_r {
@@ -162,13 +160,42 @@ body {
 }
 
 #blog-list-item {
+  display: flex;
+  flex-direction: row;
+
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
   height: fit-content;
-  border: 1px solid #ac724b;
-  margin-bottom: 15px;
+
+  border-top: 1px solid #ac724b;
+  padding-top: 5px;
   margin-right: auto;
-  padding: 10px 5px;
+}
+
+#blog-entry-thumbnail {
+  flex: 0 0 128px;
+  margin-right: 10px;
+}
+#blog-entry-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px 10px;
+}
+#blog-entry-header {
+  display: flex;
+  flex-direction: row;
+}
+#blog-entry-title {
+  flex: 1;
+}
+#blog-entry-date {
+  flex: 1 1 100px;
+  text-align: right;
+}
+#blog-entry-body {
+  flex: 1;
+  margin-top: 10px;
 }
 
 #content {
@@ -219,8 +246,8 @@ article p {
   padding: 10px;
   margin-top: 5px;
   box-sizing: border-box;
-  border-top: #955b33 4px ridge;;
-  color: #e4ea92;
+  border-top: #955b33 4px ridge;
+  color: #ffccaa;
   text-align: center;
 
   background: linear-gradient(180deg, #781800BA 20%, #955b33 95%), center bottom / contain no-repeat url("images/catbreadwink.png");
@@ -243,7 +270,7 @@ article p {
 }
 
 a {
-  color: #f9bc2a;
+  color: #e4ea92;
   text-decoration: none;
 }
 
@@ -383,7 +410,7 @@ a {
 // = Responsive Design =
 // =====================
 
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 60rem) {
   #mainbox {
     flex-direction: column;
   }
