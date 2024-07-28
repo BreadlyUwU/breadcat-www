@@ -15,10 +15,28 @@
   {{ section.content | safe }}
     {% for page in section.pages %}
     <div id="blog-list-item">
-      <a href="{{ page.permalink | safe }}">
-        {{page.date}} <b>- {{ page.title }}</b><br/><br/>
-        <span>{{ page.description }}</span>
-      </a>
+      
+      <div id="blog-entry-thumbnail">
+        <a href="{{ page.permalink | safe }}">
+          <img src="{{page.path}}_thumbnail.png"/>
+        </a>
+      </div>
+      
+      <div id="blog-entry-info">
+        <div id="blog-entry-header">
+          <div id="blog-entry-title">
+            <a href="{{ page.permalink | safe }}">
+              <b>{{ page.title }}</b>
+            </a>
+          </div>
+          <div id="blog-entry-date">
+            <span>{{page.date}}</span>
+          </div>
+        </div>
+        <div id="blog-entry-body">
+          <span>{{ page.description }}</span>
+        </div>
+      </div>
     </div>
     {% endfor %}
 </article>
