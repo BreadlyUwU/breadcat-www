@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
+<head>
+  <link rel="stylesheet" href="{{ get_url(path='disable-mstdn.css') }}" type="text/css" />
+</head>
+
 <div class="titlebar">
   <div class="w-left">
     <a href="{{ get_url(path='/blog') }}"><div class="btn arrow" title="Back"></div></a>
