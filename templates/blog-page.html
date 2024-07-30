@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <head>
+  <title>{{ page.title }} - {{ config.title }}</title>
+  <meta name="description" content="{{ page.description }}" />
+  <meta name="keywords" content="
+    {% if page.taxonomies.tags %}
+    {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
+    {% for tag in post_tags %}
+      {{ tag }}</a>
+      {%- if not loop.last %}{{ ', ' | safe }}{% endif -%}
+    {% endfor -%}
+    {% endif %}
+  " />
+  <meta name="author" content="Breadly" />
   <link rel="stylesheet" href="{{ get_url(path='disable-mstdn.css') }}" type="text/css" />
 </head>
 
