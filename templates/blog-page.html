@@ -6,9 +6,8 @@
   <meta name="keywords" content="
     {% if page.taxonomies.tags %}
     {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
-    {% for tag in post_tags %}
-      {{ tag }}</a>
-      {%- if not loop.last %}{{ ', ' | safe }}{% endif -%}
+    {% for tag in post_tags %}{{ tag }}
+    {%- if not loop.last %}{{ ',' | safe }}{% endif -%}
     {% endfor -%}
     {% endif %}
   " />
@@ -45,7 +44,7 @@
           {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
           {% for tag in post_tags %}
             <a href="/tag-listing#{{ tag | slugify }}">{{ tag }}</a>
-            {%- if not loop.last %}{{ ", " | safe }}{% endif -%}
+            {%- if not loop.last %}{{ "|" | safe }}{% endif -%}
           {% endfor -%}
         {% endif %}
       </td>
