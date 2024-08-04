@@ -5,10 +5,10 @@
   <meta name="description" content="{{ page.description }}" />
   <meta name="keywords" content="
     {% if page.taxonomies.tags %}
-    {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
-    {% for tag in post_tags %}{{ tag }}
-    {%- if not loop.last %}{{ ',' | safe }}{% endif -%}
-    {% endfor -%}
+      {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
+      {% for tag in post_tags %}{{ tag }}
+        {%- if not loop.last %}{{ ',' | safe }}{% endif -%}
+      {% endfor -%}
     {% endif %}
   " />
   <meta name="author" content="Breadly" />
@@ -34,6 +34,7 @@
     <tr>
       <th scope="col">Date</th>
       <th scope="col">Category/Tags</th>
+      <th scope="col">i18n</th>
     </tr>
   </thead>
   <tbody>
@@ -47,6 +48,15 @@
             {%- if not loop.last %}{{ "|" | safe }}{% endif -%}
           {% endfor -%}
         {% endif %}
+      </td>
+      <td>
+        {% for t in page.translations %}
+          {% if t.lang != "en" %}
+            <a href="{{ config.base_url }}/{{t.lang}}/blog/{{page.slug}}">{{t.lang}}</a>
+          {% else %}
+            <a href="{{ config.base_url }}/blog/{{page.slug}}">{{t.lang}}</a>
+          {% endif %}
+        {% endfor %}
       </td>
     </tr>
   </tbody>
