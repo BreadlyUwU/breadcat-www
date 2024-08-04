@@ -34,3 +34,31 @@ generate_feeds = true
 taxonomies = [
     {name = "tags", render = false}
 ]
+
+[translations]
+home = "Home"
+hosted_by = "Hosted by"
+built_with = "Built with"
+source_code = "Source Code"
+last_update = "Last update"
+toc = "Welcome ~"
+the_buttons = "The Obligatory Buttons"
+fedi_feed = "Fediverse Feed"
+atom_feed = "Atom/RSS Feed"
+jump_i18n = "Accéder à la version Française"
+
+back = "Back"
+
+[languages.fr.translations]
+home = "Accueil"
+hosted_by = "Hébergé par"
+built_with = "Compilé avec"
+source_code = "Code Source"
+last_update = "Dernière MàJ"
+toc = "Bienvenu·e ~"
+the_buttons = "Les Incontournables Boutons"
+fedi_feed = "Flux du Fédiverse"
+atom_feed = "FLux Atom/RSS"
+jump_i18n = "Jump to English version"
+
+back = "Retour"
