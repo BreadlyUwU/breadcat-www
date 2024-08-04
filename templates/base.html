@@ -51,7 +51,7 @@
         <div class="window" id="table-of-content">
           <div class="titlebar">
             <div class="w-left">
-              <div class="title"><span>Table of content</span></div>
+              <div class="title"><span>{{ trans(key="toc", lang=lang) }}</span></div>
             </div>
             <div class="w-right">
               <div class="btn minimize"></div>
@@ -63,8 +63,38 @@
           <table>
             <thead>
               <tr>
-                <th scope="col"><span><a href="{{ config.base_url }}">Home</a><span></th>
-                <th scope="col"><span><a href="{{ get_url(path='blog/') }}">Blog</a><span></th>
+                <th scope="col"><span><a href="
+                  {% if lang != 'en' %}
+                    {{ config.base_url }}/{{ lang }}
+                  {% else %}
+                    {{ config.base_url }}
+                  {% endif %}
+                ">{{ trans(key="home", lang=lang) }}</a><span></th>
+                <th scope="col"><span><a href="
+                  {% if lang != 'en' %}
+                    {{ get_url(path='fr/blog/') }} 
+                  {% else %} 
+                    {{ get_url(path='blog/') }} 
+                  {% endif %}
+                ">Blog</a><span></th>
+              </tr>
+            </thead>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <span>
+                      <a href="
+                        {% if lang == 'fr' %}
+                          {{ config.base_url }}
+                        {% endif %}
+                        {% if lang == 'en' %}
+                          {{ config.base_url }}/fr
+                        {% endif %}
+                      ">{{ trans(key='jump_i18n', lang=lang) }}</a>
+                  </span>
+                </th>
               </tr>
             </thead>
           </table>
@@ -73,7 +103,7 @@
         <div class="window" id="buttons-card">
           <div class="titlebar">
             <div class="w-left">
-              <div class="title"><span>The Obligatory Buttons</span></div>
+              <div class="title"><span>{{ trans(key="the_buttons", lang=lang) }}</span></div>
             </div>
             <div class="w-right">
               <div class="btn minimize"></div>
@@ -108,7 +138,7 @@
         <div class="window" id="mastodon-box">
           <div class="titlebar">
             <div class="w-left">
-              <div class="title"><span>Mastodon Feed</span></div>
+              <div class="title"><span>{{ trans(key='fedi_feed', lang=lang) }}</span></div>
             </div>
             <div class="w-right">
               <div class="btn minimize"></div>
@@ -123,12 +153,12 @@
 
     <div id="footer">
       <div id="ft-left">
-        <span>Hosted by <a href="https://www.neocities.org">Neocities<img src="{{ get_url(path='images/neocities-logo.png') }}" /></a></span><br/>
-        <span>Built with <a href="https://www.getzola.org/">Zola <img src="{{ get_url(path='images/zola-logo.gif') }}"></a></span><br/>
-        <span><a href="https://git.gay/Breadly/breadcat-www">Source Code</a></span>
+        <span>{{ trans(key="hosted_by", lang=lang) }} <a href="https://www.neocities.org">Neocities<img src="{{ get_url(path='images/neocities-logo.png') }}" /></a></span><br/>
+        <span>{{ trans(key="built_with", lang=lang) }} <a href="https://www.getzola.org/">Zola <img src="{{ get_url(path='images/zola-logo.gif') }}"></a></span><br/>
+        <span><a href="https://git.gay/Breadly/breadcat-www">{{ trans(key="source_code", lang=lang) }}</a></span>
       </div>
       <div id="ft-right">
-        <span>✳️ Last updated<br/>{{ buildtime }}<br />(UTC+02 - Europe/Paris)</span>
+        <span>✳️ {{ trans(key="last_update", lang=lang) }}<br/>{{ buildtime }}<br />(UTC+02 - Europe/Paris)</span>
       </div>
     </div>
   </div>
