@@ -216,10 +216,12 @@ body {
   margin-left: auto;
   display: block;
 
-  border-top: #955b33 4px ridge;;
+  border-top: #955b33 4px ridge;
   background: #00000050;
   padding-top: 5px;
   padding: 10px 0;
+
+  overflow-y: scroll;
 }
 #content #blog-footer :nth-of-type(n) {
   text-align: center;
