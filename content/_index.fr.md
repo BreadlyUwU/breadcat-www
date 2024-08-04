@@ -9,5 +9,4 @@ Je suis Breadly, une aspirante dev qui en est à l'apprentissage (incroyablement
 Je connais également quelques (tout petits) morceaux de Java/Kotlin, C, Lua… de PHP, Javascript et Python.
 
 
-J'espère pouvoir bientôt créer des quetrus cools que je pourrais partager sur ce petit site web conçu avec amour <img
-style="vertical-align: middle;" src="images/catAnim/catNom.gif" />
+J'espère pouvoir bientôt créer des quetrus cools que je pourrais partager sur ce petit site web conçu avec amour ![](/images/catAnim/catNom.gif)

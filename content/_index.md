@@ -10,5 +10,4 @@ I also know some (very tiny) bits of Java/Kotlin, C, Lua… of PHP, Javascript a
 
 Oh and I use arch btw. /\
 
-I hope I'll soon be able to make some cool stuff I would want to share in this cozy place. <img
-style="vertical-align: middle;" src="images/catAnim/catNom.gif" />
+I hope I'll soon be able to make some cool stuff I would want to share in this cozy place. ![](/images/catAnim/catNom.gif)
