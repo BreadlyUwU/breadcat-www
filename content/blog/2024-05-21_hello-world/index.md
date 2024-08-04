@@ -2,7 +2,7 @@
 title = "Hello World"
 description = "You'll see the creation of new lives… Eventually."
 [taxonomies]
-tags = ['Misc']
+tags = ['Misc', 'Introduction', 'Breadly']
 +++
 
 ## What's dis??
