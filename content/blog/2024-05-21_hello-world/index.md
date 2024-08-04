@@ -7,7 +7,6 @@ tags = ['Misc', 'Introduction', 'Breadly']
 
 ## What's dis??
 ### Is that a post???
-
 Oh, my, god! Imagine all the potential!
 
 Well, maybe I should then speak a little about myself, so… I am the kind of person who love to prepare for myself the coziest place for anything, that can be my operating system, desktop environment, a comfy Firefox profile, a development env… a website! But I also have a lot of difficulties to actually get to work, on anything.
@@ -19,7 +18,7 @@ So that's maybe a part of the reasons behind the fact that, there's a blog… *b
 But there's still a lot of stuff I would **love** to make, so that's why I'm learning programmation.
 
 ### What I'm learning?
-As said on the [homepage](../..), `Rust`. I'm also learning a bit of `Javascript` since that's not unrelated to what I want to make in the future.
+As said on the [homepage](../..), `Rust`. I'm also learning a bit of `Javascript` since that's not unrelated to what I want to make in the future. And I have a love for Lua, since it is the very first language on which I've learned to program some little stupid thing for the PlayStation Portable and Nintendo DS. 
 
 ### What I like?
 I love speedruns (watching, but also would love to do some), I love ugly pixelated games, I will probably throw some words about why Sonic Robo Blast 2, Sonic Robo Blast 2 Kart and Dr.Robotnik's Rings Racer are the best games ever created. 🦔
