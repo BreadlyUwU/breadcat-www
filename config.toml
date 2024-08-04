@@ -31,3 +31,6 @@ highlight_theme = "ayu-dark"
 
 [languages.fr]
 generate_feeds = true
+taxonomies = [
+    {name = "tags", render = false}
+]
