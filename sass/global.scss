@@ -249,10 +249,11 @@ article p {
   margin-top: 5px;
   box-sizing: border-box;
   border-top: #955b33 4px ridge;
+  border-bottom: #955b33 4px ridge;
   color: #ffccaa;
   text-align: center;
 
-  background: linear-gradient(180deg, #781800BA 20%, #955b33 95%), center bottom / contain no-repeat url("images/catbreadwink.png");
+  background: #781800BA center bottom / contain no-repeat url("images/catbreadwink.png");
 }
 
 #footer #ft-left {
