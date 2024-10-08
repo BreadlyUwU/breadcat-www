@@ -58,7 +58,7 @@ last_update = "Dernière MàJ"
 toc = "Bienvenu·e ~"
 the_buttons = "Les Incontournables Boutons"
 fedi_feed = "Flux du Fédiverse"
-atom_feed = "FLux Atom/RSS"
+atom_feed = "Flux Atom/RSS"
 jump_i18n = "Jump to English version"
 
 back = "Retour"
