@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="preload" href="{{ get_url(path='global.css') }}" as="style" />
-    <link rel="preload" href="{{ get_url(path='breadly-engine.js') }}" as="style" />
-    <link rel="stylesheet" href="https://esm.sh/emfed@1/toots.css" type="text/css" />
     <link rel="stylesheet" href="{{ get_url(path='global.css') }}" type="text/css" />
+    <link rel="stylesheet" href="https://esm.sh/emfed@1/toots.css" type="text/css" />
     <meta charset="utf-8" />
     <meta pronouns="she/they" />
     <meta name="fediverse:creator" content="@breadly@eldritch.cafe" />
@@ -73,9 +71,9 @@
                 ">{{ trans(key="home", lang=lang) }}</a><span></th>
                 <th scope="col"><span><a href="
                   {% if lang != 'en' %}
-                    {{ get_url(path='fr/blog/') }} 
-                  {% else %} 
-                    {{ get_url(path='blog/') }} 
+                    {{ get_url(path='fr/blog/') }}
+                  {% else %}
+                    {{ get_url(path='blog/') }}
                   {% endif %}
                 ">Blog</a><span></th>
               </tr>
