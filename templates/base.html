@@ -2,7 +2,6 @@
 <html>
   <head>
     <link rel="stylesheet" href="{{ get_url(path='global.css') }}" type="text/css" />
-    <link rel="stylesheet" href="https://esm.sh/emfed@1/toots.css" type="text/css" />
     <meta charset="utf-8" />
     <meta pronouns="she/they" />
     <meta name="fediverse:creator" content="@breadly@eldritch.cafe" />
@@ -133,21 +132,6 @@
         {% endblock %}
       </div>
 
-      <div id="sidebar-right">
-        <div class="window" id="mastodon-box">
-          <div class="titlebar">
-            <div class="w-left">
-              <div class="title"><span>{{ trans(key='fedi_feed', lang=lang) }}</span></div>
-            </div>
-            <div class="w-right">
-              <div class="btn minimize"></div>
-              <div class="btn maximize"></div>
-              <div class="btn close"></div>
-            </div>
-          </div>
-          <a class="mastodon-feed" href="https://eldritch.cafe/@Breadly" data-toot-limit="5">Follow me on the Fediverse</a>
-        </div>
-      </div>
     </div>
 
     <div id="footer">
