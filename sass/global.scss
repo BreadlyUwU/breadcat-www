@@ -1,289 +1,291 @@
-//Temp: #955b33
-
 @font-face {
-  font-family: "w95fa";
-  src: url("fonts/w95fa.woff2");
-  src: url("fonts/w95fa.woff");
-  src: url("fonts/w95fa.otf");
+    font-family: "w95fa";
+    src: url("fonts/w95fa.woff2");
+    src: url("fonts/w95fa.woff");
+    src: url("fonts/w95fa.otf");
 }
 
 @font-face {
-  font-family: "sysfont";
-  src: url("fonts/sysfont.woff2");
-  src: url("fonts/sysfont.woff");
-  src: url("fonts/sysfont.otf");
+    font-family: "sysfont";
+    src: url("fonts/sysfont.woff2");
+    src: url("fonts/sysfont.woff");
+    src: url("fonts/sysfont.otf");
 }
 
 body {
-  color: #FFFFFF;
-  background: #955b33;
-  font-family: "w95fa";
-  font-size: 18px;
-  margin: 0px;
+    color: #ffffff;
+    background: #955b33;
+    font-family: "w95fa";
+    font-size: 18px;
+    margin: 0px;
 }
 
 #supermainbox {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  background: url("images/bg.gif");
-
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: url("images/bg.gif");
 }
 
 #header {
-  display: flex;
-  flex-flow: row wrap;
-  position: static;
-  width: 100%;
-  height: 28px;
-  box-sizing: border-box;
-  align-items: center;
-  margin-bottom: 5px;
-  background: #955b33;
-  color: #ffccaa;
-  image-rendering: pixelated;
-  text-align: center;
-  vertical-align: middle;
-  //text-shadow: 0 0 1px #e4ea92;
-  border-bottom: #955b33 4px ridge;
+    display: flex;
+    flex-flow: row wrap;
+    position: static;
+    width: 100%;
+    height: 28px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 5px;
+    background: #955b33;
+    color: #ffccaa;
+    image-rendering: pixelated;
+    text-align: center;
+    vertical-align: middle;
+    //text-shadow: 0 0 1px #e4ea92;
+    border-bottom: #955b33 4px ridge;
 
-  overflow: hidden;
+    overflow: hidden;
 }
 #header span {
-  font-family: "sysfont";
-  font-size: larger;
-  letter-spacing: 1px;
+    font-family: "sysfont";
+    font-size: larger;
+    letter-spacing: 1px;
 }
 
 #header_l {
-  flex: 1;
-  text-align: left;
-  padding-left: 2px;
+    flex: 1;
+    text-align: left;
+    padding-left: 2px;
 }
 
 #header_c {
-  flex: 1;
-  /*height: inherit;
-  box-sizing: border-box;
-  text-align: center;
-  vertical-align: middle;
+    flex: 1;
+    /*height: inherit;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
 
-  padding-top: 4px*/
+    padding-top: 4px*/
 }
 
 #header_r {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-end;
 }
-#icon-mastodon, #icon-bluesky, #icon-cohost {
-  padding-left: 4px;
+#icon-mastodon,
+#icon-bluesky,
+#icon-cohost {
+    padding-left: 4px;
 }
 #icon-atom {
-  padding-left: 1px;
+    padding-left: 1px;
 }
 
 #mainbox {
-  display: flex;
-  flex: 3 1 content;
-  flex-direction: row;
-  align-self: stretch;
-  margin: 0px 5px;
+    display: flex;
+    flex: 3 1 content;
+    flex-direction: row;
+    align-self: stretch;
+    margin: 0px 5px;
 
-  box-sizing: border-box;
-  flex-direction: row;
+    box-sizing: border-box;
+    flex-direction: row;
 }
 
-#sidebar-left, #sidebar-right {
-  flex: 0 0 280px;
-  flex-direction: column;
-  box-sizing: border-box;
-  text-align: center;
+#sidebar-left,
+#sidebar-right {
+    flex: 0 0 280px;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
 
-  font-family: "w95fa";
-  font-size: 18px;
+    font-family: "w95fa";
+    font-size: 18px;
 
-  image-rendering: pixelated;
+    image-rendering: pixelated;
 }
 #sidebar-right {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 #sidebar-left > *:not(:first-child) {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 #sidebar-left > div > table {
-  width: 100%;
-  margin: auto;
-  padding: 2%;
+    width: 100%;
+    margin: auto;
+    padding: 2%;
 }
 #sidebar-left > div > table th {
-  width: 50%;
+    width: 50%;
 }
 
 #sidebar-right > *:not(:first-child) {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 #sidebar-right > div > table {
-  width: 100%;
-  margin: auto;
-  padding: 2%;
+    width: 100%;
+    margin: auto;
+    padding: 2%;
 }
 #sidebar-right > div > table th {
-  width: 50%;
+    width: 50%;
 }
 
 #bobvibes {
-  background: url("images/breadcat.gif") repeat,#560000CA;
-  animation: bg-scrolling-reverse 6s linear infinite;
-  height: 122px;
+    background:
+        url("images/breadcat.gif") repeat,
+        #560000ca;
+    animation: bg-scrolling-reverse 6s linear infinite;
+    height: 122px;
 }
 #bob {
-  box-sizing: content-box;
-  height: 90px;
-  background: center / auto no-repeat url("images/bobvibes.gif");
+    box-sizing: content-box;
+    height: 90px;
+    background: center / auto no-repeat url("images/bobvibes.gif");
 }
 
 #table-of-content img {
-  vertical-align: text-bottom;
+    vertical-align: text-bottom;
 }
 
 #table-of-content table {
-  border-top: #955b33 4px ridge;
+    border-top: #955b33 4px ridge;
 }
 
 #blog-list-item {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 
-  box-sizing: border-box;
-  width: 100%;
-  height: fit-content;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
 
-  border-top: 1px solid #ac724b;
-  padding-top: 5px;
-  margin-right: auto;
+    border-top: 1px solid #ac724b;
+    padding-top: 5px;
+    margin-right: auto;
 }
 
 #blog-entry-thumbnail {
-  flex: 0 0 128px;
-  margin-right: 10px;
+    flex: 0 0 128px;
+    margin-right: 10px;
 }
 #blog-entry-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 10px;
 }
 #blog-entry-header {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 #blog-entry-title {
-  flex: 1;
+    flex: 1;
 }
 #blog-entry-date {
-  flex: 1 1 100px;
-  text-align: right;
+    flex: 1 1 100px;
+    text-align: right;
 }
 #blog-entry-body {
-  flex: 1;
-  margin-top: 10px;
+    flex: 1;
+    margin-top: 10px;
 }
 
 #content {
-  flex: 3;
-  margin-left: 5px;
-  letter-spacing: 0.2px;
+    flex: 3;
+    margin-left: 5px;
+    letter-spacing: 0.2px;
 }
 
 #content :first-child {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
 #content pre {
-  font-size: 90%;
+    font-size: 90%;
 }
 
 #content #blog-footer {
-  margin-left: auto;
-  display: block;
+    margin-left: auto;
+    display: block;
 
-  border-top: #955b33 4px ridge;
-  background: #00000050;
-  padding-top: 5px;
-  padding: 10px 0;
+    border-top: #955b33 4px ridge;
+    background: #00000050;
+    padding-top: 5px;
+    padding: 10px 0;
 
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 #content #blog-footer :nth-of-type(n) {
-  text-align: center;
-  padding: 2px 10px;
+    text-align: center;
+    padding: 2px 10px;
 }
 
 article {
-  padding: 10px;
+    padding: 10px;
 }
 article h1,
 article h2 {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 article p {
-  line-height: 1.4;
+    line-height: 1.4;
 }
 
 #footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex: 0 0 100px;
-  padding: 2px 10px 2px 10px;
-  margin-top: 5px;
-  box-sizing: border-box;
-  border-top: #955b33 4px ridge;
-  border-bottom: #955b33 4px ridge;
-  color: #ffccaa;
-  text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 100px;
+    padding: 2px 10px 2px 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-top: #955b33 4px ridge;
+    border-bottom: #955b33 4px ridge;
+    color: #ffccaa;
+    text-align: center;
 
-  background: #781800BA center bottom / contain no-repeat url("images/catbreadwink.png");
+    background: #781800ba center bottom / contain no-repeat
+        url("images/catbreadwink.png");
 }
 
 #footer #ft-left {
-  text-align: left;
+    text-align: left;
 }
 #footer #ft-right {
-  text-align: right;
+    text-align: right;
 }
 
 #footer span {
-  font-family: "sysfont";
-  font-size: 16px;
+    font-family: "sysfont";
+    font-size: 16px;
 }
 
 #footer img {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 a {
-  color: #e4ea92;
-  text-decoration: none;
+    color: #e4ea92;
+    text-decoration: none;
 }
-
 
 // =================
 // = Windows Class =
 // =================
 
 .window {
-  box-sizing: border-box;
-  background: #531515ca;
-  border: #955b33 4px ridge;
+    box-sizing: border-box;
+    background: #531515ca;
+    border: #955b33 4px ridge;
 }
 
 // ===================
@@ -291,87 +293,91 @@ a {
 // ===================
 
 .titlebar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, #955b33, #ac724b);
-  box-sizing: content-box;
-  vertical-align: middle;
-  height: 20px;
-  border-bottom: #955b33 4px ridge;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #955b33, #ac724b);
+    box-sizing: content-box;
+    vertical-align: middle;
+    height: 20px;
+    border-bottom: #955b33 4px ridge;
 }
 
 .title {
-  color:#ffccaa;
-  font-family: "w95fa";
-  font-size: 15px;
-  font-weight: bolder;
-  letter-spacing: 1px;
-  margin-left: 0px;
-  padding-top: 3px;
+    color: #ffccaa;
+    font-family: "w95fa";
+    font-size: 15px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-left: 0px;
+    padding-top: 3px;
 }
 
 .w-left {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  box-sizing: border-box;
-  min-width: fit-content;
-  justify-content: flex-start;
-  text-align: left;
-  vertical-align: middle;
-  align-items: center;
-  padding-left: 3px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    box-sizing: border-box;
+    min-width: fit-content;
+    justify-content: flex-start;
+    text-align: left;
+    vertical-align: middle;
+    align-items: center;
+    padding-left: 3px;
 }
 
 .w-right {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  box-sizing: border-box;
-  min-width: fit-content;
-  justify-content: flex-end;
-  text-align: right;
-  vertical-align: middle;
-  align-items: center;
-  padding: 0 3px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    box-sizing: border-box;
+    min-width: fit-content;
+    justify-content: flex-end;
+    text-align: right;
+    vertical-align: middle;
+    align-items: center;
+    padding: 0 3px;
 }
 
 .btn {
-  height: 14px;
-  width: 16px;
-  box-sizing: border-box;
-  image-rendering: pixelated;
+    height: 14px;
+    width: 16px;
+    box-sizing: border-box;
+    image-rendering: pixelated;
 }
 
 .arrow {
-  background: url("images/arrow.gif");
-  margin-right: 4px;
+    background: url("images/arrow.gif");
+    margin-right: 4px;
 }
 
 .minimize {
-  background: url("images/reduce.gif");
-  margin-left: 2px;
+    background: url("images/reduce.gif");
+    margin-left: 2px;
 }
 
 .maximize {
-  background: url("images/maximize.gif");
-  margin-left: 2px;
+    background: url("images/maximize.gif");
+    margin-left: 2px;
 }
 
 .close {
-  background: url("images/close.gif");
-  margin-left: 2px;
+    background: url("images/close.gif");
+    margin-left: 2px;
 }
 
 // Background shenanigans
 @keyframes bg-scrolling-reverse {
-  100% { background-position: 100px 100px; }
+    100% {
+        background-position: 100px 100px;
+    }
 }
 
 @keyframes bg-scrolling {
-  0% { background-position: 100px 100px; }
+    0% {
+        background-position: 100px 100px;
+    }
 }
 
 // =====================
@@ -379,32 +385,32 @@ a {
 // =====================
 
 @media screen and (max-width: 60rem) {
-  #mainbox {
-    flex-direction: column;
-  }
+    #mainbox {
+        flex-direction: column;
+    }
 
-  #content {
-    margin-left: 0;
-    order: 1;
-  }
+    #content {
+        margin-left: 0;
+        order: 1;
+    }
 
-  #sidebar-left {
-    order: 2;
-  }
+    #sidebar-left {
+        order: 2;
+    }
 
-  #sidebar-right {
-    display: none;
-  }
+    #sidebar-right {
+        display: none;
+    }
 
-  #buttons-card {
-    display: none;
-  }
+    #buttons-card {
+        display: none;
+    }
 
-  #bobvibes {
-    display: none;
-  }
+    #bobvibes {
+        display: none;
+    }
 
-  #mastodon-box {
-    display: none;
-  }
+    #mastodon-box {
+        display: none;
+    }
 }

@@ -1,47 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
-<head>
-  <title>Stinky's Writings - {{ config.title }}</title>
-</head>
+    <head>
+        <title>Stinky's Writings - {{ config.title }}</title>
+    </head>
 
-<div class="titlebar">
-  <div class="w-left">
-    <a href="../"><div class="btn arrow" title="{{ trans(key="back", lang=lang) }}"></div></a>
-    <div class="title"><span>{{ section.title }}</span></div>
-  </div>
-  <div class="w-right">
-    <div class="btn minimize"></div>
-    <div class="btn maximize"></div>
-    <div class="btn close"></div>
-  </div>
-</div>
-<article>
-  {{ section.content | safe }}
-    {% for page in section.pages %}
-    <div id="blog-list-item">
-      
-      <div id="blog-entry-thumbnail">
-        <a href="{{ page.permalink | safe }}">
-          <img src="{{page.path}}_thumbnail.png"/>
-        </a>
-      </div>
-      
-      <div id="blog-entry-info">
-        <div id="blog-entry-header">
-          <div id="blog-entry-title">
-            <a href="{{ page.permalink | safe }}">
-              <b>{{ page.title }}</b>
-            </a>
-          </div>
-          <div id="blog-entry-date">
-            <span>{{page.date}}</span>
-          </div>
-        </div>
-        <div id="blog-entry-body">
-          <span>{{ page.description }}</span>
-        </div>
-      </div>
+    <div class="titlebar">
+    <div class="w-left">
+        <a href="../"><div class="btn arrow" title="{{ trans(key="back", lang=lang) }}"></div></a>
+        <div class="title"><span>{{ section.title }}</span></div>
     </div>
-    {% endfor %}
-</article>
+    <div class="w-right">
+        <div class="btn minimize"></div>
+        <div class="btn maximize"></div>
+        <div class="btn close"></div>
+    </div>
+    </div>
+    <article>
+    {{ section.content | safe }}
+        {% for page in section.pages %}
+            <div id="blog-list-item">
+                <div id="blog-entry-thumbnail">
+                    <a href="{{ page.permalink | safe }}">
+                    <img src="{{page.path}}_thumbnail.png"/>
+                    </a>
+                </div>
+
+                <div id="blog-entry-info">
+                    <div id="blog-entry-header">
+                        <div id="blog-entry-title">
+                            <a href="{{ page.permalink | safe }}">
+                            <b>{{ page.title }}</b>
+                            </a>
+                        </div>
+                        <div id="blog-entry-date">
+                            <span>{{page.date}}</span>
+                        </div>
+                    </div>
+                    <div id="blog-entry-body">
+                        <span>{{ page.description }}</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </article>
 {% endblock content %}

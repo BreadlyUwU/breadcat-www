@@ -1,21 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<head>
-  <title>{{ config.title }}</title>
-  <meta name="description" content="{{ config.description }}" />
-</head>
+    <head>
+        <title>{{ config.title }}</title>
+        <meta name="description" content="{{ config.description }}" />
+    </head>
 
-<div class="titlebar">
-  <div class="w-left">
-    <div class="title"><span>C:</span></div>
-  </div>
-  <div class="w-right">
-    <div class="btn minimize"></div>
-    <div class="btn maximize"></div>
-    <div class="btn close"></div>
-  </div>
-</div>
-<article>
-  {{ section.content | safe }}
-</article>
+    <div class="titlebar">
+        <div class="w-left">
+            <div class="title"><span>C:</span></div>
+        </div>
+        <div class="w-right">
+            <div class="btn minimize"></div>
+            <div class="btn maximize"></div>
+            <div class="btn close"></div>
+        </div>
+    </div>
+    <article>{{ section.content | safe }}</article>
 {% endblock content %}

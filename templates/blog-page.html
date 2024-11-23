@@ -1,64 +1,64 @@
 {% extends "base.html" %}
 {% block content %}
-<head>
-  <title>{{ page.title }} - {{ config.title }}</title>
-  <meta name="description" content="{{ page.description }}" />
-  <meta name="keywords" content="
-    {% if page.taxonomies.tags %}
-      {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
-      {% for tag in post_tags %}{{ tag }}
-        {%- if not loop.last %}{{ ',' | safe }}{% endif -%}
-      {% endfor -%}
-    {% endif %}
-  " />
-  <meta name="author" content="Breadly" />
-</head>
+    <head>
+        <title>{{ page.title }} - {{ config.title }}</title>
+        <meta name="description" content="{{ page.description }}" />
+        <meta name="keywords" content="
+            {% if page.taxonomies.tags %}
+            {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
+            {% for tag in post_tags %}{{ tag }}
+                {%- if not loop.last %}{{ ',' | safe }}{% endif -%}
+            {% endfor -%}
+            {% endif %}
+        " />
+        <meta name="author" content="Breadly" />
+    </head>
 
-<div class="titlebar">
-  <div class="w-left">
-    <a href="../"><div class="btn arrow" title="{{ trans(key="back", lang=lang) }}"></div></a>
-    <div class="title"><span>{{ page.title }}</span></div>
-  </div>
-  <div class="w-right">
-    <div class="btn minimize"></div>
-    <div class="btn maximize"></div>
-    <div class="btn close"></div>
-  </div>
-</div>
-<article>
-  {{ page.content | safe }}
-</article>
-<table id="blog-footer">
-  <thead>
-    <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Category/Tags</th>
-      <th scope="col">i18n</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ page.date | safe }}</td>
-      <td>
-        {% if page.taxonomies.tags %}
-          {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
-          {% for tag in post_tags %}
-            <a href="/tag-listing#{{ tag | slugify }}">{{ tag }}</a>
-            {%- if not loop.last %}{{ "|" | safe }}{% endif -%}
-          {% endfor -%}
-        {% endif %}
-      </td>
-      <td>
-        {% for t in page.translations %}
-          {% if t.lang != "en" %}
-            <a href="{{ config.base_url }}/{{t.lang}}/blog/{{page.slug}}">{{t.lang}}</a>
-          {% else %}
-            <a href="{{ config.base_url }}/blog/{{page.slug}}">{{t.lang}}</a>
-          {% endif %}
-        {% endfor %}
-      </td>
-    </tr>
-  </tbody>
-</table>
+    <div class="titlebar">
+        <div class="w-left">
+            <a href="../"><div class="btn arrow" title="{{ trans(key="back", lang=lang) }}"></div></a>
+            <div class="title"><span>{{ page.title }}</span></div>
+        </div>
+        <div class="w-right">
+            <div class="btn minimize"></div>
+            <div class="btn maximize"></div>
+            <div class="btn close"></div>
+        </div>
+    </div>
+
+    <article>
+        {{ page.content | safe }}
+    </article>
+    <table id="blog-footer">
+        <thead>
+            <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Category/Tags</th>
+            <th scope="col">i18n</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ page.date | safe }}</td>
+                <td>
+                    {% if page.taxonomies.tags %}
+                        {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
+                        {% for tag in post_tags %}
+                            <a href="/tag-listing#{{ tag | slugify }}">{{ tag }}</a>
+                            {%- if not loop.last %}{{ "|" | safe }}{% endif -%}
+                        {% endfor -%}
+                    {% endif %}
+                </td>
+                <td>
+                    {% for t in page.translations %}
+                        {% if t.lang != "en" %}
+                            <a href="{{ config.base_url }}/{{t.lang}}/blog/{{page.slug}}">{{t.lang}}</a>
+                        {% else %}
+                            <a href="{{ config.base_url }}/blog/{{page.slug}}">{{t.lang}}</a>
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
 {% endblock content %}
-
