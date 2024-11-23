@@ -75,10 +75,8 @@ body {
   display: flex;
   flex-direction: row;
   flex: 1;
-  height: inherit;
   box-sizing: border-box;
   align-items: center;
-  vertical-align: middle;
   justify-content: flex-end;
 }
 #icon-mastodon, #icon-bluesky, #icon-cohost {
