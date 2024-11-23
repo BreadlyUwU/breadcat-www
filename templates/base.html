@@ -55,40 +55,51 @@
                         <h3><img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/>OwO<img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/></h3>
                         <table>
                             <thead>
-                            <tr>
-                                <th scope="col"><span><a href="
-                                {% if lang != 'en' %}
-                                    {{ config.base_url }}/{{ lang }}
-                                {% else %}
-                                    {{ config.base_url }}
-                                {% endif %}
-                                ">{{ trans(key="home", lang=lang) }}</a><span></th>
-                                <th scope="col"><span><a href="
-                                {% if lang != 'en' %}
-                                    {{ get_url(path='fr/blog/') }}
-                                {% else %}
-                                    {{ get_url(path='blog/') }}
-                                {% endif %}
-                                ">Blog</a><span></th>
-                            </tr>
+                                <tr>
+                                    <th scope="col">
+                                        <span>
+                                            <a href="
+                                            {% if lang != 'en' %}
+                                                {{ config.base_url }}/{{ lang }}
+                                            {% else %}
+                                                {{ config.base_url }}
+                                            {% endif %}
+                                            ">{{ trans(key="home", lang=lang) }}
+                                            </a>
+                                        </span>
+                                    </th>
+                                    <th scope="col">
+                                        <span>
+                                            <a href="
+                                                {% if lang != 'en' %}
+                                                    {{ get_url(path='fr/blog/') }}
+                                                {% else %}
+                                                    {{ get_url(path='blog/') }}
+                                                {% endif %}
+                                            ">Blog
+                                            </a>
+                                        </span>
+                                    </th>
+                                </tr>
                             </thead>
                         </table>
                         <table>
                             <thead>
-                            <tr>
-                                <th scope="col">
-                                <span>
-                                    <a href="
-                                        {% if lang == 'fr' %}
-                                        {{ config.base_url }}
-                                        {% endif %}
-                                        {% if lang == 'en' %}
-                                        {{ config.base_url }}/fr
-                                        {% endif %}
-                                    ">{{ trans(key='jump_i18n', lang=lang) }}</a>
-                                </span>
-                                </th>
-                            </tr>
+                                <tr>
+                                    <th scope="col">
+                                        <span>
+                                            <a href="
+                                                {% if lang == 'fr' %}
+                                                    {{ config.base_url }}
+                                                {% endif %}
+                                                {% if lang == 'en' %}
+                                                    {{ config.base_url }}/fr
+                                                {% endif %}
+                                                ">{{ trans(key='jump_i18n', lang=lang) }}
+                                            </a>
+                                        </span>
+                                    </th>
+                                </tr>
                             </thead>
                         </table>
                     </div>
