@@ -34,6 +34,7 @@ generate_feeds = true
 taxonomies = [
     {name = "tags", render = false}
 ]
+title = "Breadcat's Oven Baguette Edition"
 
 [translations]
 home = "Home"
