@@ -1,155 +1,153 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="{{ get_url(path='global.css') }}" type="text/css" />
-        <meta charset="utf-8" />
-        <meta pronouns="she/they" />
-        <meta name="fediverse:creator" content="@breadly@eldritch.cafe" />
-        <meta name="theme-color" content="#955b33" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+	<head>
+		<link rel="stylesheet" href="{{ get_url(path='global.css') }}" type="text/css" />
+		<meta charset="utf-8" />
+		<meta pronouns="she/they" />
+		<meta name="fediverse:creator" content="@breadly@eldritch.cafe" />
+		<meta name="theme-color" content="#955b33" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        {% block rss %}
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") }}">
-        {% endblock %}
-    </head>
-    {%set buildtime = now() | date(format="%Y-%m-%d %H:%M") %}
-    <body>
-        <div id="supermainbox">
-            <div id="header">
-                <div id="header_l"><span id="js-status">🚫</span><img style="vertical-align:middle; margin-top: -10px;" src="{{ get_url(path='images/catAnim/catNomL.gif') }}"/></div>
-                <div id="header_c"><span style="white-space: nowrap;">{{ config.title }}</span></div>
-                <div id="header_r">
-                    <div id="icon-mastodon"><a href="https://eldritch.cafe/@breadly" rel="me"><img src="{{get_url(path='/images/links-btn/btn-mastodon.gif')}}" alt="Mastodon" title="Mastodon"/></a></div>
-                    <div id="icon-bluesky"><a href="https://bsky.app/profile/breadcat.neocities.org" rel="me"><img src="{{get_url(path='/images/links-btn/btn-bluesky.gif')}}" alt="Bluesky" title="Bluesky"/></a></div>
-                    <div id="icon-atom"><a href="{{ get_url(path='atom.xml') }}"><img src="{{ get_url(path='images/atom.gif') }}" alt="{{ trans(key='atom_feed', lang=lang) }}" title="{{ trans(key='atom_feed', lang=lang) }}"></a></div>
-                </div>
-            </div>
-            <div id="mainbox">
-                <div id="sidebar-left">
-                    <div class="window" id="bobvibes">
-                    <div class="titlebar">
-                        <div class="w-left">
-                            <div class="title"><span>:D</span></div>
-                        </div>
-                        <div class="w-right">
-                            <div class="btn minimize"></div>
-                            <div class="btn maximize"></div>
-                            <div class="btn close"></div>
-                        </div>
-                    </div>
-                    <div id="bob"></div>
-                    </div>
+		{% block rss %}
+		<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") }}">
+		{% endblock %}
+	</head>
+	{%set buildtime = now() | date(format="%Y-%m-%d %H:%M") %}
+	<body>
+		<div id="supermainbox">
+			<div id="header">
+				<div id="header_l"><span id="js-status">🚫</span><img style="vertical-align:middle; margin-top: -10px;" src="{{ get_url(path='images/catAnim/catNomL.gif') }}"/></div>
+				<div id="header_c"><span style="white-space: nowrap;">{{ config.title }}</span></div>
+				<div id="header_r">
+					<div id="icon-mastodon"><a href="https://eldritch.cafe/@breadly" rel="me"><img src="{{get_url(path='/images/links-btn/btn-mastodon.gif')}}" alt="Mastodon" title="Mastodon"/></a></div>
+					<div id="icon-bluesky"><a href="https://bsky.app/profile/breadcat.neocities.org" rel="me"><img src="{{get_url(path='/images/links-btn/btn-bluesky.gif')}}" alt="Bluesky" title="Bluesky"/></a></div>
+					<div id="icon-atom"><a href="{{ get_url(path='atom.xml') }}"><img src="{{ get_url(path='images/atom.gif') }}" alt="{{ trans(key='atom_feed', lang=lang) }}" title="{{ trans(key='atom_feed', lang=lang) }}"></a></div>
+				</div>
+			</div>
+			<div id="mainbox">
+				<div id="sidebar-left">
+					<div class="window" id="bobvibes">
+					<div class="titlebar">
+						<div class="w-left">
+							<div class="title"><span>:D</span></div>
+						</div>
+						<div class="w-right">
+							<div class="btn minimize"></div>
+							<div class="btn maximize"></div>
+							<div class="btn close"></div>
+						</div>
+					</div>
+					<div id="bob"></div>
+					</div>
 
-                    <div class="window" id="table-of-content">
-                        <div class="titlebar">
-                            <div class="w-left">
-                                <div class="title"><span>{{ trans(key="toc", lang=lang) }}</span></div>
-                            </div>
-                            <div class="w-right">
-                                <div class="btn minimize"></div>
-                                <div class="btn maximize"></div>
-                                <div class="btn close"></div>
-                            </div>
-                        </div>
-                        <h3><img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/>OwO<img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/></h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th scope="col">
-                                        <span>
-                                            <a href="
-                                            {% if lang != 'en' %}
-                                                {{ config.base_url }}/{{ lang }}
-                                            {% else %}
-                                                {{ config.base_url }}
-                                            {% endif %}
-                                            ">{{ trans(key="home", lang=lang) }}
-                                            </a>
-                                        </span>
-                                    </th>
-                                    <th scope="col">
-                                        <span>
-                                            <a href="
-                                                {% if lang != 'en' %}
-                                                    {{ get_url(path='fr/blog/') }}
-                                                {% else %}
-                                                    {{ get_url(path='blog/') }}
-                                                {% endif %}
-                                            ">Blog
-                                            </a>
-                                        </span>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th scope="col">
-                                        <span>
-                                            <a href="
-                                                {% if lang == 'fr' %}
-                                                    {{ config.base_url }}
-                                                {% endif %}
-                                                {% if lang == 'en' %}
-                                                    {{ config.base_url }}/fr
-                                                {% endif %}
-                                                ">{{ trans(key='jump_i18n', lang=lang) }}
-                                            </a>
-                                        </span>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+					<div class="window" id="table-of-content">
+						<div class="titlebar">
+							<div class="w-left">
+								<div class="title"><span>{{ trans(key="toc", lang=lang) }}</span></div>
+							</div>
+							<div class="w-right">
+								<div class="btn minimize"></div>
+								<div class="btn maximize"></div>
+								<div class="btn close"></div>
+							</div>
+						</div>
+						<h3><img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/>OwO<img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/></h3>
+						<table>
+							<thead>
+								<tr>
+									<th scope="col">
+										<span>
+											<a href="
+											{% if lang != 'en' %}
+												{{ config.base_url }}/{{ lang }}
+											{% else %}
+												{{ config.base_url }}
+											{% endif %}
+											">{{ trans(key="home", lang=lang) }}
+											</a>
+										</span>
+									</th>
+									<th scope="col">
+										<span>
+											<a href="
+												{% if lang != 'en' %}
+													{{ get_url(path='fr/blog/') }}
+												{% else %}
+													{{ get_url(path='blog/') }}
+												{% endif %}
+											">Blog
+											</a>
+										</span>
+									</th>
+								</tr>
+							</thead>
+						</table>
+						<table>
+							<thead>
+								<tr>
+									<th scope="col">
+										<span>
+											<a href="
+												{% if lang == 'fr' %}
+													{{ config.base_url }}
+												{% endif %}
+												{% if lang == 'en' %}
+													{{ config.base_url }}/fr
+												{% endif %}
+												">{{ trans(key='jump_i18n', lang=lang) }}
+											</a>
+										</span>
+									</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
 
-                    <div class="window" id="buttons-card">
-                        <div class="titlebar">
-                            <div class="w-left">
-                                <div class="title"><span>{{ trans(key="the_buttons", lang=lang) }}</span></div>
-                            </div>
-                            <div class="w-right">
-                                <div class="btn minimize"></div>
-                                <div class="btn maximize"></div>
-                                <div class="btn close"></div>
-                            </div>
-                        </div>
-                        <img src="{{ get_url(path='images/btn/transrats.gif') }}" title="Trans Rats (Trans Rights are Human Rights)">
-                        <a href="https://yesterweb.org/no-to-web3/"><img src="{{ get_url(path='images/btn/notoweb3.gif') }}" title="Say no to Web3"></a>
-                        <a href="https://neocities.org/"><img src="{{ get_url(path='images/btn/neocities.gif') }}" title="Neocities"></a>
-                        <br />
-                        <a href="https://kde.org/"><img src="{{ get_url(path='images/btn/kde.gif') }}" title="KDE"></a>
-                        <a href="https://kate-editor.org/"><img src="{{ get_url(path='images/btn/kate.gif') }}"" title="Kate text editor"></a>
-                        <a href="https://www.mozilla.org/firefox/new/"><img src="{{ get_url(path='images/btn/firefox.gif') }}" title="Firefox browser"></a>
-                        <br />
-                        <img src="{{ get_url(path='images/btn/archlinux.gif') }}" title="ArchLinux">
-                        <a href="https://dreampipe.net"><img src="{{ get_url(path='images/btn/dreamcast.gif') }}" title="Dreampipe"></a>
-                        <a href="https://joinmastodon.org/"><img src="{{ get_url(path='images/btn/mastodon.gif') }}" title="Mastodon"></a>
-                        <br />
-                        <img src="{{ get_url(path='images/btn/antifa.gif') }}" title="Anti-fascist">
-                        <img src="{{ get_url(path='images/btn/ulysses.gif') }}" title="Ulysse 31">
-                        <a href="https://dk64randomizer.com/"><img src="{{ get_url(path='images/btn/dk64gaming.gif') }}" title="Donkey Kong 64 Randomizer"></a>
-                    </div>
-                </div>
+					<div class="window" id="buttons-card">
+						<div class="titlebar">
+							<div class="w-left">
+								<div class="title"><span>{{ trans(key="the_buttons", lang=lang) }}</span></div>
+							</div>
+							<div class="w-right">
+								<div class="btn minimize"></div>
+								<div class="btn maximize"></div>
+								<div class="btn close"></div>
+							</div>
+						</div>
+						<img src="{{ get_url(path='images/btn/transrats.gif') }}" title="Trans Rats (Trans Rights are Human Rights)">
+						<a href="https://yesterweb.org/no-to-web3/"><img src="{{ get_url(path='images/btn/notoweb3.gif') }}" title="Say no to Web3"></a>
+						<a href="https://neocities.org/"><img src="{{ get_url(path='images/btn/neocities.gif') }}" title="Neocities"></a>
+						<br />
+						<a href="https://kde.org/"><img src="{{ get_url(path='images/btn/kde.gif') }}" title="KDE"></a>
+						<a href="https://kate-editor.org/"><img src="{{ get_url(path='images/btn/kate.gif') }}"" title="Kate text editor"></a>
+						<a href="https://www.mozilla.org/firefox/new/"><img src="{{ get_url(path='images/btn/firefox.gif') }}" title="Firefox browser"></a>
+						<br />
+						<img src="{{ get_url(path='images/btn/archlinux.gif') }}" title="ArchLinux">
+						<a href="https://dreampipe.net"><img src="{{ get_url(path='images/btn/dreamcast.gif') }}" title="Dreampipe"></a>
+						<a href="https://joinmastodon.org/"><img src="{{ get_url(path='images/btn/mastodon.gif') }}" title="Mastodon"></a>
+						<br />
+						<img src="{{ get_url(path='images/btn/antifa.gif') }}" title="Anti-fascist">
+						<img src="{{ get_url(path='images/btn/ulysses.gif') }}" title="Ulysse 31">
+						<a href="https://dk64randomizer.com/"><img src="{{ get_url(path='images/btn/dk64gaming.gif') }}" title="Donkey Kong 64 Randomizer"></a>
+					</div>
+				</div>
 
-            <div class="window" id="content">
-                {% block content %}
-                {% endblock %}
-            </div>
-
-            </div>
-
-            <div id="footer">
-                <div id="ft-left">
-                    <span>{{ trans(key="hosted_by", lang=lang) }} <a href="https://www.neocities.org">Neocities<img src="{{ get_url(path='images/neocities-logo.png') }}" /></a></span><br/>
-                    <span>{{ trans(key="built_with", lang=lang) }} <a href="https://www.getzola.org/">Zola <img src="{{ get_url(path='images/zola-logo.gif') }}"></a></span><br/>
-                    <span><a href="https://github.com/BreadlyUwU/breadcat-www">{{ trans(key="source_code", lang=lang) }}</a></span>
-                </div>
-                <div id="ft-right">
-                    <span>✳️ {{ trans(key="last_update", lang=lang) }}<br/>{{ buildtime }}<br />(UTC+02 - Europe/Paris)</span>
-                </div>
-            </div>
-        </div>
-    </body>
-    <script src="{{ get_url(path='breadly-engine.js') }}" type="module"></script>
+				<div class="window" id="content">
+					{% block content %}
+					{% endblock %}
+				</div>
+			</div>
+			<div id="footer">
+				<div id="ft-left">
+					<span>{{ trans(key="hosted_by", lang=lang) }} <a href="https://www.neocities.org">Neocities<img src="{{ get_url(path='images/neocities-logo.png') }}" /></a></span><br/>
+					<span>{{ trans(key="built_with", lang=lang) }} <a href="https://www.getzola.org/">Zola <img src="{{ get_url(path='images/zola-logo.gif') }}"></a></span><br/>
+					<span><a href="https://github.com/BreadlyUwU/breadcat-www">{{ trans(key="source_code", lang=lang) }}</a></span>
+				</div>
+				<div id="ft-right">
+					<span>✳️ {{ trans(key="last_update", lang=lang) }}<br/>{{ buildtime }}<br />(UTC+02 - Europe/Paris)</span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="{{ get_url(path='breadly-engine.js') }}" type="module"></script>
 </html>
