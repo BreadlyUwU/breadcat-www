@@ -228,7 +228,8 @@ body {
 	padding-top: 5px;
 	padding: 10px 0;
 
-	overflow-y: scroll;
+	overflow-x: scroll;
+	scrollbar-width: none;
 }
 #content #blog-footer :nth-of-type(n) {
 	text-align: center;
