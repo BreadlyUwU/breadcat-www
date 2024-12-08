@@ -2,6 +2,8 @@
 {% block content %}
 	<head>
 		<title>{{ page.title }} - {{ config.title }}</title>
+		<link rel="stylesheet" href="{{ get_url(path='blog.css') }}" type="text/css" />
+
 		<meta name="description" content="{{ page.description }}" />
 		<meta name="keywords" content="
 			{% if page.taxonomies.tags %}
