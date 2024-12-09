@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 
 		{% block rss %}
-		<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") }}">
+		<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path='atom.xml') }}">
 		{% endblock %}
 	</head>
 	{%set buildtime = now() | date(format="%Y-%m-%d %H:%M") %}
@@ -121,7 +121,7 @@
 						<a href="https://neocities.org/"><img src="{{ get_url(path='images/btn/neocities.gif') }}" title="Neocities"></a>
 						<br />
 						<a href="https://kde.org/"><img src="{{ get_url(path='images/btn/kde.gif') }}" title="KDE"></a>
-						<a href="https://kate-editor.org/"><img src="{{ get_url(path='images/btn/kate.gif') }}"" title="Kate text editor"></a>
+						<a href="https://kate-editor.org/"><img src="{{ get_url(path='images/btn/kate.gif') }}" title="Kate text editor"></a>
 						<a href="https://www.mozilla.org/firefox/new/"><img src="{{ get_url(path='images/btn/firefox.gif') }}" title="Firefox browser"></a>
 						<br />
 						<img src="{{ get_url(path='images/btn/archlinux.gif') }}" title="ArchLinux">
