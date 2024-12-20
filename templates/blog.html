@@ -19,10 +19,21 @@
 	<article>
 	{{ section.content | safe }}
 		{% for page in section.pages %}
+		{%- set png = get_image_metadata(path=page.path ~ '_thumbnail.png', allow_missing=true) -%}
+		{%- set jpg = get_image_metadata(path=page.path ~ '_thumbnail.jpg', allow_missing=true) -%}
+		{%- set gif = get_image_metadata(path=page.path ~ '_thumbnail.gif', allow_missing=true) -%}
 			<div id="blog-list-item">
 				<div id="blog-entry-thumbnail">
 					<a href="{{ page.permalink | safe }}">
-					<img src="{{page.path}}_thumbnail.png"/>
+						{%- if png -%}
+							<img src="{{page.path}}_thumbnail.png"/>
+						{%- elif jpg -%}
+							<img src="{{page.path}}_thumbnail.jpg"/>
+						{%- elif gif -%}
+							<img src="{{page.path}}_thumbnail.gif"/>
+						{%- else -%}
+							<!-- No image? <:( -->
+						{%- endif -%}
 					</a>
 				</div>
 
