@@ -11,6 +11,11 @@
 		<div class="title"><span>{{ section.title }}</span></div>
 	</div>
 	<div class="w-right">
+		{% if section.lang != "en" %}
+			<a href="{{ config.base_url }}/blog/" title="Switch to the english version of this page">🇫🇷</a>
+		{% else %}
+			<a href="{{ config.base_url }}/fr/blog/" title="Switcher vers la version française de cette page">🇬🇧</a>
+		{% endif %}
 		<div class="btn minimize"></div>
 		<div class="btn maximize"></div>
 		<div class="btn close"></div>
