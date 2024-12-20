@@ -58,9 +58,9 @@
 					<td>
 						{% for t in page.translations %}
 							{% if t.lang != "en" %}
-								<a href="{{ config.base_url }}/{{t.lang}}/blog/{{page.slug}}">{{t.lang}}</a>
+								<a href="{{ config.base_url }}/{{t.lang}}/blog/{{page.slug}}/">{{t.lang}}</a>
 							{% else %}
-								<a href="{{ config.base_url }}/blog/{{page.slug}}">{{t.lang}}</a>
+								<a href="{{ config.base_url }}/blog/{{page.slug}}/">{{t.lang}}</a>
 							{% endif %}
 						{% endfor %}
 					</td>
