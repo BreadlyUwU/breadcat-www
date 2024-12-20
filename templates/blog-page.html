@@ -58,9 +58,13 @@
 					<td>
 						{% for t in page.translations %}
 							{% if t.lang != "en" %}
-								<a href="{{ config.base_url }}/{{t.lang}}/blog/{{page.slug}}/">{{t.lang}}</a>
+								{% if t.lang == "fr" %}
+									<a href="{{ config.base_url }}/fr/blog/{{page.slug}}/" title="Version française">🇫🇷</a>
+								{% else %}
+									<a href="{{ config.base_url }}/{{t.lang}}/blog/{{page.slug}}/">{{t.lang}}</a>
+								{% endif %}
 							{% else %}
-								<a href="{{ config.base_url }}/blog/{{page.slug}}/">{{t.lang}}</a>
+								<a href="{{ config.base_url }}/blog/{{page.slug}}/" title="English version">🇬🇧</a>
 							{% endif %}
 						{% endfor %}
 					</td>
