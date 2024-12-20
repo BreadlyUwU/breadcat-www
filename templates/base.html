@@ -117,13 +117,13 @@
 							<thead>
 								<tr>
 									<th>
-										<span style="color:#ffccaa;">My button:</span><br/>
+										<span style="color:#ffccaa;">{{ trans(key="my_button", lang=lang) }}:</span><br/>
 										<a href="{{ config.base_url }}"><img src="{{ get_url(path='images/btn/breadcat.gif') }}" title="Breadcat" alt="Bread cat"></a>
 									</th>
 								</tr>
 							</thead>
 						</table>
-						<span style="font-size: 0.8em; color: #ffccaa;">(Button's background by <a href="https://absolutecreaturevibes.com">Shelley Rappleye</a>)</span>
+						<span style="font-size: 0.8em; color: #ffccaa;">({{ trans(key="my_button_bg_credit", lang=lang) }} <a href="https://absolutecreaturevibes.com">Shelley Rappleye</a>)</span>
 					</div>
 
 					<div class="window" id="buttons-card">
