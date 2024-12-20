@@ -10,7 +10,12 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 
 		{% block rss %}
-		<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path='atom.xml') }}">
+			{% if lang == 'fr' %}
+				<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path='/fr/atom.xml') }}">
+			{% endif %}
+			{% if lang == 'en' %}
+				<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path='atom.xml') }}">
+			{% endif %}
 		{% endblock %}
 	</head>
 	{%set buildtime = now() | date(format="%Y-%m-%d %H:%M") %}
@@ -23,7 +28,12 @@
 					<div id="icon-mastodon"><a href="https://eldritch.cafe/@breadly" rel="me"><img src="{{get_url(path='/images/links-btn/btn-mastodon.gif')}}" alt="Mastodon" title="Mastodon"/></a></div>
 					<div id="icon-bluesky"><a href="https://bsky.app/profile/breadcat.neocities.org" rel="me"><img src="{{get_url(path='/images/links-btn/btn-bluesky.gif')}}" alt="Bluesky" title="Bluesky"/></a></div>
 					<div id="icon-github"><a href="https://github.com/BreadlyUwU" rel="me"><img src="{{get_url(path='/images/links-btn/btn-github.gif')}}" alt="Github" title="Github"/></a></div>
-					<div id="icon-atom"><a href="{{ get_url(path='atom.xml') }}"><img src="{{ get_url(path='images/atom.gif') }}" alt="{{ trans(key='atom_feed', lang=lang) }}" title="{{ trans(key='atom_feed', lang=lang) }}"></a></div>
+					{% if lang == 'fr' %}
+						<div id="icon-atom"><a href="{{ get_url(path='/fr/atom.xml') }}"><img src="{{ get_url(path='images/atom.gif') }}" alt="{{ trans(key='atom_feed', lang=lang) }}" title="{{ trans(key='atom_feed', lang=lang) }}"></a></div>
+					{% endif %}
+					{% if lang == 'en' %}
+						<div id="icon-atom"><a href="{{ get_url(path='atom.xml') }}"><img src="{{ get_url(path='images/atom.gif') }}" alt="{{ trans(key='atom_feed', lang=lang) }}" title="{{ trans(key='atom_feed', lang=lang) }}"></a></div>
+					{% endif %}
 				</div>
 			</div>
 			<div id="mainbox">
