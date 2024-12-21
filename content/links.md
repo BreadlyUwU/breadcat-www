@@ -1,0 +1,25 @@
++++
+title = "The good links 'n the good stinks"
+description = "Every peoples/critters/living things/ sentients I follow or that I think are cool"
+sort_by = "none"
+template = "page.html"
++++
+
+#### There's a lot of peeps I follow on the web that do cool stuff or that I like as living thing, check their den!
+
+<p>
+    <a href="https://xaselgio.net"><img src="../images/btn/lt/xaselgio.gif" alt="Xaselgio (Indigo's Den)" title="Xaselgio (Indigo's Den)"/></a>
+    <a href="https://vulpinecitrus.info"><img src="../images/btn/lt/limefox.png" alt="Vulpine Citrus (lymkwi)" title="Vulpine Citrus (lymkwi)"/></a>
+    <a href="https://kokoscript.com"><img src="../images/btn/lt/kokoscript.gif" alt="Kokoscript" title="Kokoscript"/></a>
+    <a href="https://freeplay.floof.company/"><img src="../images/btn/lt/free.gif" alt="Freeplay" title="Freeplay"/></a>
+    <a href="https://damien.zone"><img src="../images/btn/lt/damien.png" alt="Damien / Eramdam" title="Damien.zone (Eramdam)"/></a>
+    <a href="https://enikofox.com"><img src="../images/btn/lt/eniko.png" alt="Eniko" title="Eniko"/></a>
+</p>
+
+<p>
+    My own button:<br/>
+    <img src="../images/btn/breadcat.gif" title="Breadcat" alt="Bread cat" style="vertical-align:middle;">
+    <span style="font-size: 0.8em; color: #ffccaa;">(Button's background by <a href="https://absolutecreaturevibes.com">Shelley Rappleye</a>)</span>
+</p>
+
+(This page is really new-new, I will populate it over time)
