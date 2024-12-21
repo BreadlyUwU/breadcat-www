@@ -50,7 +50,7 @@
 						{% if page.taxonomies.tags %}
 							{% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
 							{% for tag in post_tags %}
-								<a href="/tag-listing#{{ tag | slugify }}">{{ tag }}</a>
+								<a href="/tags#{{ tag | slugify }}">{{ tag }}</a>
 								{%- if not loop.last %}{{ "|" | safe }}{% endif -%}
 							{% endfor -%}
 						{% endif %}
