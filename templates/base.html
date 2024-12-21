@@ -8,7 +8,6 @@
 		<meta name="fediverse:creator" content="@breadly@eldritch.cafe" />
 		<meta name="theme-color" content="#955b33" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-
 		{% block rss %}
 			{% if lang == 'fr' %}
 				<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path='/fr/atom.xml') }}">
@@ -21,28 +20,19 @@
 	{%set buildtime = now() | date(format="%Y-%m-%d %H:%M") %}
 	<body>
 		<div id="supermainbox">
-			
 			{% include "modules/header.html" %}
-
 			<div id="mainbox">
 				<div id="sidebar-left">
-
 					{% include "modules/sidebar/bob.html" %}
-
 					{% include "modules/sidebar/toc.html" %}
-
 					{% include "modules/sidebar/buttons-card.html" %}
-
 				</div>
-
 				<div class="window" id="content">
 					{% block content %}
 					{% endblock %}
 				</div>
 			</div>
-			
 			{% include "modules/footer.html" %}
-
 		</div>
 	</body>
 	<script src="{{ get_url(path='breadly-engine.js') }}" type="module"></script>
