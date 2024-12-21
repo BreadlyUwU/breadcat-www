@@ -97,8 +97,7 @@ body {
 	flex-direction: row;
 }
 
-#sidebar-left,
-#sidebar-right {
+#sidebar-left {
 	flex: 0 0 280px;
 	flex-direction: column;
 	box-sizing: border-box;
@@ -123,19 +122,6 @@ body {
 	padding: 2%;
 }
 #sidebar-left > div > table th {
-	width: 50%;
-}
-
-#sidebar-right > *:not(:first-child) {
-	margin-top: 5px;
-}
-
-#sidebar-right > div > table {
-	width: 100%;
-	margin: auto;
-	padding: 2%;
-}
-#sidebar-right > div > table th {
 	width: 50%;
 }
 
@@ -278,19 +264,11 @@ a {
 		order: 2;
 	}
 
-	#sidebar-right {
-		display: none;
-	}
-
 	#buttons-card {
 		display: none;
 	}
 
 	#bobvibes {
-		display: none;
-	}
-
-	#mastodon-box {
 		display: none;
 	}
 }
