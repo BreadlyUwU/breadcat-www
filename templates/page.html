@@ -22,6 +22,11 @@
 			<div class="title"><span>{{ page.title }}</span></div>
 		</div>
 		<div class="w-right">
+			{% if page.lang != "en" %}
+				<a href="{{ config.base_url }}/{{ page.slug }}/" title="Switch to the english version of this page">🇫🇷</a>
+			{% else %}
+				<a href="{{ config.base_url }}/fr/{{ page.slug }}/" title="Switcher vers la version française de cette page">🇬🇧</a>
+			{% endif %}
 			<div class="btn minimize"></div>
 			<div class="btn maximize"></div>
 			<div class="btn close"></div>
