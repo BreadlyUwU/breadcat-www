@@ -1,0 +1,10 @@
+<div id="footer">
+    <div id="ft-left">
+        <span>{{ trans(key="hosted_by", lang=lang) }} <a href="https://www.neocities.org">Neocities<img src="{{ get_url(path='images/neocities-logo.png') }}" /></a></span><br/>
+        <span>{{ trans(key="built_with", lang=lang) }} <a href="https://www.getzola.org/">Zola <img src="{{ get_url(path='images/zola-logo.gif') }}"></a></span><br/>
+        <span><a href="https://github.com/BreadlyUwU/breadcat-www">{{ trans(key="source_code", lang=lang) }}</a></span>
+    </div>
+    <div id="ft-right">
+        <span>✳️ {{ trans(key="last_update", lang=lang) }}<br/>{{ buildtime }}<br />(UTC+02 - Europe/Paris)</span>
+    </div>
+</div>

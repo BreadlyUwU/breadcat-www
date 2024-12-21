@@ -1,0 +1,73 @@
+<div class="window" id="table-of-content">
+    <div class="titlebar">
+        <div class="w-left">
+            <div class="title"><span>{{ trans(key="toc", lang=lang) }}</span></div>
+        </div>
+        <div class="w-right">
+            <div class="btn minimize"></div>
+            <div class="btn maximize"></div>
+            <div class="btn close"></div>
+        </div>
+    </div>
+    <h3 style="color:#ffccaa;"><img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/>OwO<img src="{{ get_url(path='images/catAnim/catWalk.gif') }}"/></h3>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">
+                    <span>
+                        <a href="
+                        {% if lang != 'en' %}
+                            {{ config.base_url }}/{{ lang }}
+                        {% else %}
+                            {{ config.base_url }}
+                        {% endif %}
+                        ">{{ trans(key="home", lang=lang) }}
+                        </a>
+                    </span>
+                </th>
+                <th scope="col">
+                    <span>
+                        <a href="
+                            {% if lang != 'en' %}
+                                {{ get_url(path='fr/blog/') }}/
+                            {% else %}
+                                {{ get_url(path='blog/') }}/
+                            {% endif %}
+                        ">Blog
+                        </a>
+                    </span>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">
+                    <span>
+                        <a href="
+                            {% if lang == 'fr' %}
+                                {{ config.base_url }}
+                            {% endif %}
+                            {% if lang == 'en' %}
+                                {{ config.base_url }}/fr
+                            {% endif %}
+                            ">{{ trans(key='jump_i18n', lang=lang) }}
+                        </a>
+                    </span>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <span style="color:#ffccaa;">{{ trans(key="my_button", lang=lang) }}:</span><br/>
+                    <a href="{{ config.base_url }}"><img src="{{ get_url(path='images/btn/breadcat.gif') }}" title="Breadcat" alt="Bread cat"></a>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <span style="font-size: 0.8em; color: #ffccaa;">({{ trans(key="my_button_bg_credit", lang=lang) }} <a href="https://absolutecreaturevibes.com">Shelley Rappleye</a>)</span>
+</div>
