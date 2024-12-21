@@ -10,7 +10,7 @@ generate_feeds = true
 feed_filenames = ["atom.xml"]
 
 taxonomies = [
-    {name = "tags", render = false}
+    {name = "tags", render = true}
 ]
 
 # Whether to automatically compile all Sass files in the sass directory

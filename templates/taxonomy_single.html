@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+	<head>
+		<title>Taxonomy - {{ config.title }}</title>
+	</head>
+
+	<div class="titlebar">
+		<div class="w-left">
+			<a href="../"><div class="btn arrow" title="{{ trans(key="back", lang=lang) }}"></div></a>
+			<div class="title"><span>Taxonomy</span></div>
+		</div>
+		<div class="w-right">
+			<div class="btn minimize"></div>
+			<div class="btn maximize"></div>
+			<div class="btn close"></div>
+		</div>
+	</div>
+
+	<div id="content-body">
+		<article>
+			{% for page in term.pages %}
+				<p>
+					<a href="{{ page.permalink | safe }}">{% if page.date %}{{ page.date }} - {% endif %}{{ page.title }}</a>
+					<br />
+					{{ page.description }}
+				</p>
+			{% endfor %}
+		</article>
+	</div>
+		
+{% endblock content %}
