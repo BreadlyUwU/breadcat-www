@@ -5,7 +5,7 @@ sort_by = "none"
 template = "page.html"
 +++
 
-#### There's a lot of peeps I follow on the web that do cool stuff or that I like as living thing, check their den!
+#### There's a lot of peeps I follow on the web who do cool stuff or who I like as living thing, check out their dens!
 
 <p>
     <a href="https://xaselgio.net"><img src="../images/btn/lt/xaselgio.gif" alt="Xaselgio (Indigo's Den)" title="Xaselgio (Indigo's Den)"/></a>
