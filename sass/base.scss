@@ -136,6 +136,7 @@ body {
 	box-sizing: content-box;
 	height: 90px;
 	background: center / auto no-repeat url("images/bobvibes.gif");
+	image-rendering: pixelated;
 }
 
 #table-of-content img {
