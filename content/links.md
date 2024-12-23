@@ -14,6 +14,8 @@ template = "page.html"
     <a href="https://freeplay.floof.company/"><img src="../images/btn/lt/free.gif" alt="Freeplay" title="Freeplay"/></a>
     <a href="https://damien.zone"><img src="../images/btn/lt/damien.png" alt="Damien / Eramdam" title="Damien.zone (Eramdam)"/></a>
     <a href="https://enikofox.com"><img src="../images/btn/lt/eniko.png" alt="Eniko" title="Eniko"/></a>
+    <a href="https://eev.ee"><img src="../images/btn/lt/eevee.gif" alt="Eevee" title="Eevee"/></a>
+    <a href="https://dee.underscore.world/"><img src="../images/btn/lt/dee.png" alt="Dee Underscore" title="Dee Underscore"/></a>
 </p>
 
 <p>
