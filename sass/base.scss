@@ -61,6 +61,7 @@ body {
 
 #header_c {
 	flex: 1;
+	font-size: 1.1rem;
 	/*height: inherit;
 	box-sizing: border-box;
 	text-align: center;
@@ -104,7 +105,7 @@ body {
 	text-align: center;
 
 	font-family: "w95fa";
-	font-size: 18px;
+	font-size: 1.1rem;
 
 	image-rendering: pixelated;
 }
@@ -161,7 +162,7 @@ body {
 }
 
 #content pre {
-	font-size: 90%;
+	font-size: 0.9rem;
 }
 
 #content-body {
@@ -222,7 +223,6 @@ article p {
 
 #footer span {
 	font-family: "sysfont";
-	font-size: 16px;
 }
 
 #footer img {
