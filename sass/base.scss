@@ -201,7 +201,7 @@ article p {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	flex: 0 0 100px;
+	flex: 0 0 7rem;
 	padding: 2px 10px 2px 10px;
 	margin-top: 5px;
 	box-sizing: border-box;
@@ -209,6 +209,7 @@ article p {
 	border-bottom: #955b33 4px ridge;
 	color: #ffccaa;
 	text-align: center;
+	line-height: 2rem; // <-- Not sure it's the way to go but it's working
 
 	background: #781800ba center bottom / contain no-repeat
 		url("images/breadkitty.gif");
