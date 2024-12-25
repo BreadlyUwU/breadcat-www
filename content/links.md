@@ -7,7 +7,7 @@ template = "page.html"
 
 #### There's a lot of peeps I follow on the web who do cool stuff or who I like as living thing, check out their dens!
 
-<p>
+<p style="image-rendering: pixelated;">
     <a href="https://xaselgio.net"><img src="../images/btn/lt/xaselgio.gif" alt="Xaselgio (Indigo's Den)" title="Xaselgio (Indigo's Den)"/></a>
     <a href="https://vulpinecitrus.info"><img src="../images/btn/lt/limefox.png" alt="Vulpine Citrus (lymkwi)" title="Vulpine Citrus (lymkwi)"/></a>
     <a href="https://kokoscript.com"><img src="../images/btn/lt/kokoscript.gif" alt="Kokoscript" title="Kokoscript"/></a>
@@ -18,10 +18,10 @@ template = "page.html"
     <a href="https://dee.underscore.world/"><img src="../images/btn/lt/dee.png" alt="Dee Underscore" title="Dee Underscore"/></a>
 </p>
 
-<p>
+<p style="image-rendering: pixelated;">
     My own button:<br/>
     <img src="../images/btn/breadcat.gif" title="Breadcat" alt="Bread cat" style="vertical-align:middle;">
-    <span style="font-size: 0.8em; color: #ffccaa;">(Button's background by <a href="https://absolutecreaturevibes.com">Shelley Rappleye</a>)</span>
+    <span style="font-size: 0.8rem; color: #ffccaa;">(Button's background by <a href="https://absolutecreaturevibes.com">Shelley Rappleye</a>)</span>
 </p>
 
 (This page is really new-new, I will populate it over time)
