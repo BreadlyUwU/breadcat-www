@@ -19,6 +19,7 @@
 		{% endblock %}
 	</head>
 	{%set buildtime = now() | date(format="%Y-%m-%d %H:%M") %}
+	{% set lang = lang | default(value=config.default_language) %}
 	<body>
 		<div id="supermainbox">
 			{% include "modules/header.html" %}

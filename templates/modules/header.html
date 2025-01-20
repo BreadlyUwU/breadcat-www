@@ -6,6 +6,14 @@
         <span style="white-space: nowrap;">{{ config.title }}</span>
     </div>
     <div id="header_r">
+        <div id="icon-i18n">
+            {% if lang == "fr" %}
+                <a href="{{ config.base_url }}" title="Switch to the english version" alt="Passer vers la version anglaise du site web">🇫🇷</a>
+            {% endif %}
+            {% if lang == "en" %}
+                <a href="{{ config.base_url }}/fr" title="Switcher vers la version française" alt="Switch to the french version of this website">🇬🇧</a>
+            {% endif %}
+        </div>
         <div id="icon-mastodon"><a href="https://eldritch.cafe/@breadly" rel="me"><img src="{{get_url(path='/images/links-btn/btn-mastodon.gif')}}" alt="Mastodon" title="Mastodon"/></a></div>
         <div id="icon-bluesky"><a href="https://bsky.app/profile/breadcat.neocities.org" rel="me"><img src="{{get_url(path='/images/links-btn/btn-bluesky.gif')}}" alt="Bluesky" title="Bluesky"/></a></div>
         <div id="icon-github"><a href="https://github.com/BreadlyUwU" rel="me"><img src="{{get_url(path='/images/links-btn/btn-github.gif')}}" alt="Github" title="Github"/></a></div>
